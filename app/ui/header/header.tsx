@@ -13,15 +13,15 @@ import { usePathname } from "next/navigation";
 function Heade() {
   const pathname = usePathname();
 
-  useEffect(() => {
-    // @ts-ignore
-    const btns = document.querySelectorAll(".drop-btn") as HTMLButtonElement[];
+  // useEffect(() => {
+  //   // @ts-ignore
+  //   const btns = document.querySelectorAll(".drop-btn") as HTMLButtonElement[];
 
-    for (let i = 0; i < btns.length; i++) {
-      const element = btns[i];
-      element.click();
-    }
-  }, [pathname]);
+  //   for (let i = 0; i < btns.length; i++) {
+  //     const element = btns[i];
+  //     element.click();
+  //   }
+  // }, [pathname]);
 
   const [scrollHeight, setScrollHeight] = React.useState(0);
 
