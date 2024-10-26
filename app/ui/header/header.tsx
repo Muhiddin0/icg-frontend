@@ -16,7 +16,6 @@ function Heade() {
   useEffect(() => {
     // @ts-ignore
     const btns = document.querySelectorAll(".drop-btn") as HTMLButtonElement[];
-    console.log("🚀 ~ useEffect ~ btns:", btns);
 
     for (let i = 0; i < btns.length; i++) {
       const element = btns[i];
