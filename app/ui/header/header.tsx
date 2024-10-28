@@ -2,27 +2,14 @@
 
 import { NavigationsItems } from "@/constants/navigations";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 
 import { AlignJustify } from "lucide-react";
 import Logo from "../common/logo/logo";
 import LangSwitcherDropdown from "./lang";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
 
-function Heade() {
-  const pathname = usePathname();
-
-  // useEffect(() => {
-  //   // @ts-ignore
-  //   const btns = document.querySelectorAll(".drop-btn") as HTMLButtonElement[];
-
-  //   for (let i = 0; i < btns.length; i++) {
-  //     const element = btns[i];
-  //     element.click();
-  //   }
-  // }, [pathname]);
-
+function Header() {
   const [scrollHeight, setScrollHeight] = React.useState(0);
 
   React.useEffect(() => {
@@ -30,6 +17,16 @@ function Heade() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  function handleCloseMobileNavbar() {
+    // @ts-ignore
+    const btns = document.querySelectorAll(".drop-btn") as HTMLButtonElement[];
+
+    for (let i = 0; i < btns.length; i++) {
+      const element = btns[i];
+      element.click();
+    }
+  }
 
   return (
     <header
@@ -53,7 +50,12 @@ function Heade() {
                       <ul className="p-2">
                         {item.items?.map((subItem) => (
                           <li key={subItem.title}>
-                            <Link href={subItem.path}>{subItem.title}</Link>
+                            <Link
+                              onClick={handleCloseMobileNavbar}
+                              href={subItem.path}
+                            >
+                              {subItem.title}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -61,7 +63,12 @@ function Heade() {
                   </li>
                 ) : (
                   <li key={item.title}>
-                    <Link href={item.path as string}>{item.title}</Link>
+                    <Link
+                      onClick={handleCloseMobileNavbar}
+                      href={item.path as string}
+                    >
+                      {item.title}
+                    </Link>
                   </li>
                 )
               )}
@@ -105,4 +112,4 @@ function Heade() {
   );
 }
 
-export default Heade;
+export default Header;

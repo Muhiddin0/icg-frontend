@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./ui/header/header";
 import Footer from "./ui/footer/footer";
 import AOSProvider from "./AOSProvider";
+import CursorTrailCanvas from "./ui/cursor-trail-canvas";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <AOSProvider>
           <Header />
+          <CursorTrailCanvas className="top-0 left-0 pointer-events-none fixed inset-0 z-50 h-full w-full" />
           {children}
           <Footer />
         </AOSProvider>
