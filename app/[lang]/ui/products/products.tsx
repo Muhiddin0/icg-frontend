@@ -36,6 +36,7 @@ function ProductsList() {
               </figure>
               <div className="card-body transition-all duration-300 ease-in-out">
                 <h2 className="card-title">{title}</h2>
+                <p></p>
                 <div className="card-actions justify-end">
                   <Link href="/products" className="btn btn-primary">
                     {t("productCard.buttonText")}

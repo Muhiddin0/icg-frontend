@@ -6,6 +6,10 @@
       "description": "Biz yuqori sifatli maxsulotni taqdim etamiz bu sizga uzoq vaqt xizmat qiladi!",
       "about_us_button": "Biz haqimizda"
     },
+    "chart": {
+      "title": "Narx dinamikasi",
+      "description": "Grafikda mis narxining oxirgi bir kunlik o‘zgarishi aks ettirilgan. Bu dinamik ma’lumotlar investorlar va sanoat vakillari uchun misning hozirgi va kelajakdagi qiymatini tahlil qilishda yordam beradi."
+    },
     "about": {
       "about_title": "Biz haqimizda",
       "about_description": "Infinity Copper Group yuqori sifatli mis quvurlari yetkazib beruvchi yetakchi hisoblanadi Markaziy Osiyoda. Faoliyatlar mijozlar ehtiyojlarini qondirish, ishda moslashuvchanlik va amalga oshirishga asoslangan yangi mahsulotlar, echimlar va xizmatlarni ishlab chiqish uchun innovatsiyalar",
