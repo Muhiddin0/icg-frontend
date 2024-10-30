@@ -2,8 +2,9 @@ import React from "react";
 
 import { MainProductsItems } from "@/constants/products";
 import Calc from "@/app/[lang]/ui/calc/calc";
-import { useParams } from "next/navigation";
 import { Lang } from "@/types/types";
+import ProductTableGenrator from "../../ui/table/table";
+import { TableData } from "@/constants/coil";
 
 type Props = {
   params: {
@@ -14,6 +15,7 @@ type Props = {
 
 const ProductDetail = ({ params: { index, lang } }: Props) => {
   const product = MainProductsItems[lang][+index];
+  console.log("🚀 ~ ProductDetail ~ product:", product);
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
@@ -40,6 +42,12 @@ const ProductDetail = ({ params: { index, lang } }: Props) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container py-16 mx-auto">
+        <ProductTableGenrator
+          product={product.tcode as keyof typeof TableData}
+        />
       </div>
     </section>
   );
