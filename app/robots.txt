@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow:  https://cdn.icg.uz/
+
+Sitemap: https://icg.uz/sitemap.xml

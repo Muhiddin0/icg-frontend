@@ -49,6 +49,7 @@ export const MainProductsItems = [
     image_url: "https://icg.uz/media/product/pancake_400.png",
     description:
       "Refrigeratsiya va konditsioner tizimlarida oson o'rnatish uchun moslashuvchan mis coil.",
+    tcode: "Pancake Coil",
   },
   {
     name: "Level wound mis coil",
