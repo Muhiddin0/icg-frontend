@@ -163,6 +163,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/lwc_400.png",
       description:
         "Непрерывная медная катушка для надежной работы в промышленных и HVAC приложениях.",
+      tcode: "LWC Copper Tube Sizes",
     },
     {
       name: "Refnet",
@@ -202,6 +203,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/lwc_400.png",
       description:
         "Sanoat va HVAC ilovalarida ishonchli ishlash uchun uzluksiz mis coil.",
+      tcode: "LWC Copper Tube Sizes",
     },
     {
       name: "Refnet",
