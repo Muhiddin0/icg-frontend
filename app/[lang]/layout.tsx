@@ -11,6 +11,7 @@ import { defaultSEOConfig } from "@/seo.config";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Lang } from "@/types/types";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,19 +24,25 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = defaultSEOConfig;
+export async function generateMetadata({
+  params: { lang },
+}: {
+  params: { lang: Lang };
+}) {
+  return defaultSEOConfig[lang];
+}
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params: { lang },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: { lang: string };
 }>) {
   const messages = await getMessages();
 
   return (
-    <html data-theme="light" lang={locale}>
+    <html data-theme="light" lang={lang}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-base-100`}
       >

@@ -6,9 +6,8 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import DateUi from "../ui/time";
 import { MoveRight } from "lucide-react";
-import { NextSeo } from "next-seo";
-import { defaultSEOConfig } from "@/seo.config";
 import { Link } from "@/i18n/routing";
+import EmptyAnimation from "../ui/empty/empty";
 
 function NewsPage() {
   const { data } = useQuery<ArticlesResponse>({
@@ -20,69 +19,61 @@ function NewsPage() {
     queryKey: ["articles"],
   });
 
-  if (data) {
-    const images = data.results.map(({ poster, desk }) => ({
-      url: poster,
-      width: 1200,
-      height: 630,
-      alt: desk,
-    }));
+  // const images = data.results.map(({ poster, desk }) => ({
+  //   url: poster,
+  //   width: 1200,
+  //   height: 630,
+  //   alt: desk,
+  // }));
 
-    defaultSEOConfig.openGraph.images = images;
+  // defaultSEOConfig.openGraph.images = images;
 
-    return (
-      <>
-        <NextSeo
-          title={defaultSEOConfig.title + " - News"}
-          description={defaultSEOConfig.description}
-          openGraph={defaultSEOConfig.openGraph}
-          twitter={defaultSEOConfig.twitter}
-          facebook={defaultSEOConfig.facebook}
-        />
+  return (
+    <>
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-wrap -m-4">
+            {data ? (
+              data.results.map(
+                ({ created_at, desk, id, poster, title, updated_at }) => (
+                  <div className="p-4 md:w-1/3">
+                    <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                      <img
+                        className="lg:h-48 md:h-36 w-full object-cover object-center"
+                        src={poster}
+                        alt={title}
+                      />
+                      <div className="p-6">
+                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                          {title}
+                        </h1>
+                        <p className="leading-relaxed mb-3 line-clamp-3">
+                          {desk}
+                        </p>
+                        <div className="flex items-center justify-between flex-wrap">
+                          <DateUi dateString={created_at} />
 
-        <section className="text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-wrap -m-4">
-              {data
-                ? data.results.map(
-                    ({ created_at, desk, id, poster, title, updated_at }) => (
-                      <div className="p-4 md:w-1/3">
-                        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                          <img
-                            className="lg:h-48 md:h-36 w-full object-cover object-center"
-                            src={poster}
-                            alt={title}
-                          />
-                          <div className="p-6">
-                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                              {title}
-                            </h1>
-                            <p className="leading-relaxed mb-3 line-clamp-3">
-                              {desk}
-                            </p>
-                            <div className="flex items-center justify-between flex-wrap">
-                              <DateUi dateString={created_at} />
-
-                              <Link
-                                href={`/news/${id}`}
-                                className="text-primary inline-flex items-center gap-2 md:mb-2 lg:mb-0"
-                              >
-                                O'qish
-                                <MoveRight />
-                              </Link>
-                            </div>
-                          </div>
+                          <Link
+                            href={`/news/${id}`}
+                            className="text-primary inline-flex items-center gap-2 md:mb-2 lg:mb-0"
+                          >
+                            O'qish
+                            <MoveRight />
+                          </Link>
                         </div>
                       </div>
-                    )
-                  )
-                : null}
-            </div>
+                    </div>
+                  </div>
+                )
+              )
+            ) : (
+              <EmptyAnimation />
+            )}
           </div>
-        </section>
-      </>
-    );
-  }
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default NewsPage;
