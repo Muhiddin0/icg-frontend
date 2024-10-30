@@ -104,6 +104,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/straight_400.png",
       description:
         "Strong and high-quality copper pipes used in various industries and HVAC systems.",
+      tcode: "Straight copper pipes",
     },
     {
       name: "Inner Bended Copper Pipe",
@@ -144,6 +145,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/straight_400.png",
       description:
         "Прочные и качественные медные трубы, используемые в различных отраслях и системах HVAC.",
+      tcode: "Straight copper pipes",
     },
     {
       name: "Медная труба с внутренним изгибом",
@@ -156,7 +158,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/pancake_400.png",
       description:
         "Гибкая медная катушка для легкой установки в холодильных и кондиционерных системах.",
-      tcode: "Панкейк катушка",
+      tcode: "Pancake Coil",
     },
     {
       name: "Медная катушка Level Wound",
@@ -184,6 +186,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/straight_400.png",
       description:
         "Turli sanoat va HVAC tizimlarida qo'llaniladigan mustahkam va sifatli mis trubkalar.",
+      tcode: "Straight copper pipes",
     },
     {
       name: "Ichki burmali mis trubka",

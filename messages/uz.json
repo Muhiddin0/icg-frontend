@@ -220,5 +220,21 @@
       "title": "Yangiliklar majud emas",
       "description": "Biz sizni yangiliklar bilan tanishtiramiz. Ammo hozirgi vaqtda hech qanday yangiliklar mavjud emas. Iltimos, kelajakda qaytib tashrif buyuring."
     }
+  },
+
+  "table": {
+    "tableHeaders": {
+      "outerDiameter": "Tashqi diametr",
+      "size": "O‘lcham",
+      "wallThickness": "Devor qalinligi (dyuym/mm)",
+      "unitWeight": "Birlik og‘irligi (funt/ft, kg/m)",
+      "length": "Uzunlik (ft, m)"
+    },
+    "tableValues": {
+      "min": "Minimal",
+      "max": "Maksimal",
+      "ft": "ft",
+      "m": "m"
+    }
   }
 }

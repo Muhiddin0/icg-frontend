@@ -15,7 +15,6 @@ type Props = {
 
 const ProductDetail = ({ params: { index, lang } }: Props) => {
   const product = MainProductsItems[lang][+index];
-  console.log("🚀 ~ ProductDetail ~ product:", product);
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">

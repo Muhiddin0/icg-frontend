@@ -212,5 +212,20 @@
       "title": "No News Available",
       "description": "We will keep you updated with our news. However, there are no news items available at the moment. Please check back in the future."
     }
+  },
+  "table": {
+    "tableHeaders": {
+      "outerDiameter": "Outer Diameter",
+      "size": "Size",
+      "wallThickness": "Wall Thickness (in/mm)",
+      "unitWeight": "Unit Weight (lb/ft, kg/m)",
+      "length": "Length (ft, m)"
+    },
+    "tableValues": {
+      "min": "Min",
+      "max": "Max",
+      "ft": "ft",
+      "m": "m"
+    }
   }
 }
