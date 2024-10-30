@@ -28,7 +28,8 @@
     "next-seo": "^6.6.0",
     "react": "^18",
     "react-countup": "^6.5.3",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
