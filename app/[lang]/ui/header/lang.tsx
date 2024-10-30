@@ -1,4 +1,6 @@
 import { LangItems } from "@/constants/langs";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { Lang } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -8,6 +10,9 @@ import React from "react";
 function LangSwitcherDropdown() {
   const { lang } = useParams();
   const currentLang = LangItems.filter((item) => item.lang === lang)[0];
+
+  const route = useRouter();
+  const pathname = usePathname();
 
   return (
     <details className="dropdown dropdown-end">
@@ -23,7 +28,12 @@ function LangSwitcherDropdown() {
       <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow mt-2">
         {LangItems.map((item) => (
           <li key={item.code}>
-            <Link className="flex items-center gap-2" href={"/" + item.lang}>
+            <button
+              onClick={() => {
+                route.push(pathname, { locale: item.lang as Lang });
+              }}
+              className="flex items-center gap-2"
+            >
               <Image
                 src={`https://flagcdn.com/${item.code}.svg`}
                 className="rounded-md"
@@ -32,7 +42,7 @@ function LangSwitcherDropdown() {
                 height={40}
               />
               {item.name}
-            </Link>
+            </button>
           </li>
         ))}
       </ul>

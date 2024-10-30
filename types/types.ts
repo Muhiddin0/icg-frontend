@@ -1,5 +1,7 @@
 // types.ts
 
+export type Lang = "uz" | "en" | "ru";
+
 import { ApiResponse } from ".";
 
 // Define the structure for a single result item

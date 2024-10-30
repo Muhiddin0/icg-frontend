@@ -145,7 +145,11 @@
     "title": "Our Products",
     "subtitle": "World-Class Products",
     "description": "ICG.UZ offers high-quality products and solutions based on modern technologies. We strive to provide flexible and innovative services to meet customer needs. Our products are developed with a personalized approach to each client, helping us earn their trust.",
-    "link_text": "Get it"
+    "link_text": "Get it",
+    "steps-finish": {
+      "title": "Reliable Partnership",
+      "description": "The company ensures long-term reliable partnerships through quality products and services."
+    }
   },
 
   "contact": {
@@ -193,50 +197,10 @@
       }
     }
   },
-
   "footer": {
-    "social": {
-      "title": "Follow us on Social Media",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/icguz"
-        },
-        {
-          "name": "Instagram",
-          "url": "https://www.instagram.com/icguz/"
-        },
-        {
-          "name": "Telegram",
-          "url": "https://t.me/icguz"
-        }
-      ]
-    },
-    "links": {
-      "title": "Useful Links",
-      "items": [
-        {
-          "name": "Home",
-          "url": "/"
-        },
-        {
-          "name": "About Us",
-          "url": "/about"
-        },
-        {
-          "name": "Our Products",
-          "url": "/products"
-        },
-        {
-          "name": "News",
-          "url": "/news"
-        },
-        {
-          "name": "Contact",
-          "url": "/contact"
-        }
-      ]
-    },
-    "rights": "© 2024 All rights reserved."
+    "description": "The activities are focused on meeting customer needs and creating new products and services based on flexibility and innovation.",
+    "copyright": {
+      "text": "© 2024 Qmatrics"
+    }
   }
 }

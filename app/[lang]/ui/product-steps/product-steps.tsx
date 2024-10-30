@@ -1,13 +1,21 @@
+"use client";
+
 import { ICGAdvantagesSteps } from "@/constants/steps";
+import { Lang } from "@/types/types";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import React from "react";
 
 function ProductSteps() {
+  const { lang }: { lang: Lang } = useParams();
+  const t = useTranslations("products");
+
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-            {ICGAdvantagesSteps.map((item) => (
+            {ICGAdvantagesSteps[lang].map((item) => (
               <div key={item.step} className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none" />
@@ -41,11 +49,10 @@ function ProductSteps() {
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  Ishonchli hamkorlik
+                  {t("steps-finish.title")}
                 </h2>
                 <p className="leading-relaxed">
-                  Kompaniya sifatli mahsulotlar va xizmatlar orqali uzoq
-                  muddatli ishonchli hamkorlikni ta'minlaydi.{" "}
+                  {t("steps-finish.description")}
                 </p>
               </div>
             </div>

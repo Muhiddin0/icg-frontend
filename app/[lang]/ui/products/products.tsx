@@ -6,8 +6,12 @@ import { ProductsItem } from "@/constants/products";
 import SectionTitle from "../common/section-title/section-title";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { Lang } from "@/types/types";
+import { useParams } from "next/navigation";
 
 function ProductsList() {
+  const { lang }: { lang: Lang } = useParams();
+
   const t = useTranslations("home.products");
 
   return (
@@ -18,7 +22,7 @@ function ProductsList() {
           desk={t("sectionTitle.description")}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
-          {ProductsItem.map(({ image, title }) => (
+          {ProductsItem[lang].map(({ image, title }) => (
             <div
               data-aos="fade-up"
               className="product-card card bg-red-400 hover:bg-transparent image-full shadow-xl"

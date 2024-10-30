@@ -2,16 +2,18 @@ import React from "react";
 
 import { MainProductsItems } from "@/constants/products";
 import Calc from "@/app/[lang]/ui/calc/calc";
-import { TableData } from "@/constants/coil";
+import { useParams } from "next/navigation";
+import { Lang } from "@/types/types";
 
 type Props = {
   params: {
     index: string;
+    lang: Lang;
   };
 };
 
-const ProductDetail = ({ params: { index } }: Props) => {
-  const product = MainProductsItems[+index];
+const ProductDetail = ({ params: { index, lang } }: Props) => {
+  const product = MainProductsItems[lang][+index];
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">

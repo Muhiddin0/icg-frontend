@@ -8,8 +8,12 @@ import Logo from "../common/logo/logo";
 import LangSwitcherDropdown from "./lang";
 import clsx from "clsx";
 import { Link } from "@/i18n/routing";
+import { useParams } from "next/navigation";
+import { Lang } from "@/types/types";
 
 function Header() {
+  const { lang }: { lang: Lang } = useParams();
+
   const [scrollHeight, setScrollHeight] = React.useState(0);
 
   React.useEffect(() => {
@@ -42,7 +46,7 @@ function Header() {
               <AlignJustify />
             </summary>
             <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1000] mt-3 w-52 p-2 shadow">
-              {NavigationsItems.map((item) =>
+              {NavigationsItems[lang].map((item) =>
                 item.isSub ? (
                   <li key={item.title}>
                     <details>
@@ -81,7 +85,7 @@ function Header() {
         {/* Desktop Menu */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">
-            {NavigationsItems.map((item) =>
+            {NavigationsItems[lang].map((item) =>
               item.isSub ? (
                 <li key={item.title}>
                   <details>

@@ -6,8 +6,9 @@ import ProductSteps from "../ui/product-steps/product-steps";
 
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { Lang } from "@/types/types";
 
-function ProductsPage() {
+function ProductsPage({ params: { lang } }: { params: { lang: Lang } }) {
   const t = useTranslations("products");
 
   // const seoImages = MainProductsItems.map(({ image_url, description }) => ({
@@ -36,7 +37,7 @@ function ProductsPage() {
           </div>
 
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            {MainProductsItems.map((item, index) => (
+            {MainProductsItems[lang].map((item, index) => (
               <div
                 key={item.name}
                 className="p-4 md:w-1/3 sm:mb-0 mb-6 hover:[&>div>img]:scale-110"

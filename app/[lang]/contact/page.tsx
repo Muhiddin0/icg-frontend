@@ -54,7 +54,7 @@ function ContactPage() {
                   {t("contact_info.local_phone.heading")}
                 </h2>
                 <Link href={"tel:+998983000062"} className="leading-relaxed">
-                  tel:+998 98 300 00 62
+                  {t("contact_info.local_phone.link")}
                 </Link>
               </div>
             </div>

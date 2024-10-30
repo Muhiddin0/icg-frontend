@@ -145,7 +145,15 @@
     "title": "Mahsulotlarimiz",
     "subtitle": "Jahon standartlarifagi maxsulotlar",
     "description": "ICG.UZ kompaniyasi zamonaviy texnologiyalarga asoslangan yuqori sifatli mahsulotlar va yechimlar taklif etadi. Ular mijozlar ehtiyojlarini qondirish uchun moslashuvchan va innovatsion xizmatlarni taqdim etishga intiladi. Kompaniya mahsulotlari har bir mijozga individual yondashuv bilan ishlab chiqiladi, bu esa ularning ishonchini qozonishga yordam beradi.",
-    "link_text": "Olish"
+    "link_text": "Olish",
+    "steps-finish": {
+      "title": "Ishonchli hamkorlik",
+      "description": "Kompaniya sifatli mahsulotlar va xizmatlar orqali uzoq muddatli ishonchli hamkorlikni ta'minlaydi."
+    },
+    "image": {
+      "src": "https://icg.uz/media/images/about-1.jpg",
+      "alt": "step"
+    }
   },
 
   "contact": {
@@ -197,11 +205,9 @@
   },
 
   "footer": {
-    "footer": {
-      "description": "Faoliyat mijozlar ehtiyojlarini qondirishga, ishda moslashuvchanlik va innovatsiyalar asosida yangi mahsulot va xizmatlar yaratishga qaratilgan.",
-      "copyright": {
-        "text": "© 2024 Qmatrics"
-      }
+    "description": "Faoliyat mijozlar ehtiyojlarini qondirishga, ishda moslashuvchanlik va innovatsiyalar asosida yangi mahsulot va xizmatlar yaratishga qaratilgan.",
+    "copyright": {
+      "text": "© 2024 Qmatrics"
     }
   }
 }

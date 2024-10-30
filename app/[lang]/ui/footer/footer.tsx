@@ -1,24 +1,28 @@
+"use client";
+
 import React from "react";
 import Logo from "../common/logo/logo";
 import { FooterItems } from "@/constants/footer";
 
 import { Link } from "@/i18n/routing";
 import { Send } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
+import { Lang } from "@/types/types";
 
 function Footer() {
+  const { lang }: { lang: Lang } = useParams();
+  const t = useTranslations("footer");
+
   return (
     <footer className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <Logo />
-          <p className="mt-2 text-sm text-gray-500">
-            Faoliyat mijozlar ehtiyojlarini qondirishga, ishda moslashuvchanlik
-            va innovatsiyalar asosida yangi mahsulot va xizmatlar yaratishga
-            qaratilgan.
-          </p>
+          <p className="mt-2 text-sm text-gray-500">{t("description")}</p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          {FooterItems.map((item) => (
+          {FooterItems[lang].map((item) => (
             <div key={item.title} className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
                 {item.title}
