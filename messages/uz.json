@@ -209,5 +209,12 @@
     "copyright": {
       "text": "© 2024 Qmatrics"
     }
+  },
+
+  "news": {
+    "empty": {
+      "title": "Yangiliklar majud emas",
+      "description": "Biz sizni yangiliklar bilan tanishtiramiz. Ammo hozirgi vaqtda hech qanday yangiliklar mavjud emas. Iltimos, kelajakda qaytib tashrif buyuring."
+    }
   }
 }

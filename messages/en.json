@@ -202,5 +202,11 @@
     "copyright": {
       "text": "© 2024 Qmatrics"
     }
+  },
+  "news": {
+    "empty": {
+      "title": "No News Available",
+      "description": "We will keep you updated with our news. However, there are no news items available at the moment. Please check back in the future."
+    }
   }
 }
