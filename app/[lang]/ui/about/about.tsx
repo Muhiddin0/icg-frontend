@@ -6,16 +6,19 @@ import { Link } from "@/i18n/routing";
 import React from "react";
 import SectionTitle from "../common/section-title/section-title";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
+import { Lang } from "@/types/types";
 
 function About() {
   const t = useTranslations("home.about");
+  const { lang }: { lang: Lang } = useParams();
 
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <SectionTitle title={t("about_title")} desk={t("about_description")} />
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-          {AboutItems.map((item) => (
+          {AboutItems[lang].map((item) => (
             <div
               data-aos="fade-up"
               key={item.name}
