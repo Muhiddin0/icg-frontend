@@ -6,6 +6,10 @@
       "description": "We provide high-quality products that will serve you well for a long time!",
       "about_us_button": "About Us"
     },
+    "chart": {
+      "title": "Price Dynamics",
+      "description": "The chart shows the price change of copper over the past day. This dynamic data helps investors and industry representatives analyze the current and future value of copper."
+    },
     "about": {
       "about_title": "About Us",
       "about_description": "Infinity Copper Group is a leading supplier of high-quality copper pipes in Central Asia. Our business is based on meeting customer needs, flexibility in work, and developing new products, solutions, and services based on innovation.",
