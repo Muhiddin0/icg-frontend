@@ -123,6 +123,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/lwc_400.png",
       description:
         "Continuous copper coil for reliable operation in industrial and HVAC applications.",
+      tcode: "LWC Copper Tube Sizes",
     },
     {
       name: "Refnet",

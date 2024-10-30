@@ -36,7 +36,7 @@ const ProductDetail = ({ params: { index, lang } }: Props) => {
 
             {product.tcode && <Calc product={product.tcode as any} />}
             <div className="flex">
-              <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+              <button className="flex ml-auto text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary/50 rounded">
                 Button
               </button>
             </div>
