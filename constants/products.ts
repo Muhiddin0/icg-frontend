@@ -137,6 +137,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/fittings_400_HKp3At3.png",
       description:
         "Reliable copper fittings for secure connections in plumbing and HVAC systems.",
+      tcode_fit: "Copper Fittings",
     },
   ],
   ru: [
@@ -178,6 +179,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/fittings_400_HKp3At3.png",
       description:
         "Надежные медные фитинги для безопасного соединения в сантехнических и HVAC системах.",
+      tcode_fit: "Copper Fittings",
     },
   ],
   uz: [
@@ -219,6 +221,7 @@ export const MainProductsItems = {
       image_url: "https://icg.uz/media/product/fittings_400_HKp3At3.png",
       description:
         "Santexnika va HVAC tizimlarida xavfsiz ulanishlar uchun ishonchli mis tutqichlar.",
+      tcode_fit: "Copper Fittings",
     },
   ],
 };

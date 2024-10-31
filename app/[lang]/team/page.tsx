@@ -7,8 +7,15 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { Lang } from "@/types/types";
 
-function TeamPage() {
+interface Props {
+  params: {
+    lang: Lang;
+  };
+}
+
+function TeamPage({ params: { lang } }: Props) {
   const t = useTranslations("team");
 
   return (
@@ -24,7 +31,7 @@ function TeamPage() {
             </p>
           </div>
           <div className="flex flex-wrap -m-4">
-            {TeamMembersList.map((item) => (
+            {TeamMembersList[lang].map((item) => (
               <div key={item.fullname} className="p-4 lg:w-1/2">
                 <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                   <Image

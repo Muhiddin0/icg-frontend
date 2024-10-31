@@ -8,7 +8,7 @@ export const FooterItems = {
           path: "/",
         },
         {
-          name: "Maxsulotlarimiz",
+          name: "Mahsulotlarimiz",
           path: "/products",
         },
         {
@@ -33,7 +33,7 @@ export const FooterItems = {
           path: "/contributors",
         },
         {
-          name: "Export",
+          name: "Eksport",
           path: "/export",
         },
         {

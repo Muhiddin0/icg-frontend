@@ -3,7 +3,7 @@
     "hero": {
       "welcome_message": "ICG ga xush kelibsiz!",
       "main_heading": "Qiymat yaratamiz",
-      "description": "Biz yuqori sifatli maxsulotni taqdim etamiz bu sizga uzoq vaqt xizmat qiladi!",
+      "description": "Biz yuqori sifatli mahsulotni taqdim etamiz, bu sizga uzoq vaqt xizmat qiladi!",
       "about_us_button": "Biz haqimizda"
     },
     "chart": {
@@ -12,7 +12,7 @@
     },
     "about": {
       "about_title": "Biz haqimizda",
-      "about_description": "Infinity Copper Group yuqori sifatli mis quvurlari yetkazib beruvchi yetakchi hisoblanadi Markaziy Osiyoda. Faoliyatlar mijozlar ehtiyojlarini qondirish, ishda moslashuvchanlik va amalga oshirishga asoslangan yangi mahsulotlar, echimlar va xizmatlarni ishlab chiqish uchun innovatsiyalar",
+      "about_description": "Infinity Copper Group yuqori sifatli mis quvurlari yetkazib beruvchi yetakchi hisoblanadi Markaziy Osiyoda. Faoliyatlar mijozlar ehtiyojlarini qondirish, ishda moslashuvchanlik va amalga oshirishga asoslangan yangi mahsulotlar, yechimlar va xizmatlarni ishlab chiqish uchun innovatsiyalarni qamrab oladi.",
       "more_info_button": "Batafsil"
     },
     "products": {
@@ -21,7 +21,7 @@
         "description": "ICG.UZ kompaniyasi zamonaviy texnologiyalarga asoslangan yuqori sifatli mahsulotlar va yechimlar taklif etadi. Ular mijozlar ehtiyojlarini qondirish uchun moslashuvchan va innovatsion xizmatlarni taqdim etishga intiladi. Kompaniya mahsulotlari har bir mijozga individual yondashuv bilan ishlab chiqiladi, bu esa ularning ishonchini qozonishga yordam beradi."
       },
       "productCard": {
-        "buttonText": "Buy Now"
+        "buttonText": "Sotib olish"
       }
     },
     "partners": {
@@ -32,8 +32,8 @@
     },
     "latestNews": {
       "sectionTitle": {
-        "title": "So'ngi yangiliklar",
-        "description": "So'ngi yangiliklar - bu yerda bizning kompaniyaning yangi mahsulotlari, xizmatlari va yutuqlari haqida ma'lumotlar keltiriladi. Shuningdek, bu yerda bizning ustozlarimiz va hamkorlarimizning maqolalari, intervyulari va boshqa yangiliklari keltiriladi."
+        "title": "So'nggi yangiliklar",
+        "description": "So'nggi yangiliklar - bu yerda bizning kompaniyaning yangi mahsulotlari, xizmatlari va yutuqlari haqida ma'lumotlar keltiriladi. Shuningdek, bu yerda bizning ustozlarimiz va hamkorlarimizning maqolalari, intervyulari va boshqa yangiliklari keltiriladi."
       },
       "button": {
         "readMore": "O'qish"
@@ -46,7 +46,7 @@
       },
       "contactForm": {
         "heading": "Aloqa",
-        "description": "Biz bilan bog'lanishingiz yoki be'pul maslaxat olishingiz mumkun",
+        "description": "Biz bilan bog'lanishingiz yoki bepul maslahat olishingiz mumkin",
         "emailOrPhone": "Email yoki Telefon",
         "message": "Xabar",
         "submitButton": "Jo'natish"
@@ -56,8 +56,8 @@
 
   "about": {
     "aboutHero": {
-      "imageAlt": "Infinity Couper Group logotipi",
-      "title": "Infinity Couper Group",
+      "imageAlt": "Infinity Copper Group logotipi",
+      "title": "Infinity Copper Group",
       "description": "ICG (Infinity Copper Group) O'zbekistondagi yetakchi mis quvurlari yetkazib beruvchi kompaniya hisoblanadi. 2010 yilda tashkil topgan bo'lib, avtomobilsozlik, qurilish, maishiy texnika kabi turli sohalarda qo'llaniladigan mis quvurlar ishlab chiqaradi. Kompaniya mijozlar ehtiyojlarini qondirish va innovatsiyalarga asoslangan mahsulotlarni taklif etadi. Barcha mahsulotlar sof mineral xomashyodan ishlab chiqariladi. Kompaniya dunyo bo'ylab ko'plab hamkorlarga ega va sifatni birinchi o'ringa qo'yadi.",
       "buttons": {
         "phone": {
@@ -77,7 +77,7 @@
         {
           "value": 5,
           "unit": "mln+",
-          "description": "Yetkazib berilgan maxsulotlarimiz"
+          "description": "Yetkazib berilgan mahsulotlarimiz"
         },
         {
           "value": 100,
@@ -98,7 +98,7 @@
     },
     "aboutInfoFirst": {
       "status": "ICG tarixi",
-      "desk": "Faoliyat mijozlar ehtiyojlarini qondirish, ishda moslashuvchanlik va yangi mahsulotlar, echimlar va xizmatlarni ishlab chiqishda innovatsiyalarga asoslangan. Infinity Copper Group tarixi 2010 yilda boshlangan. Kundalik hayotda, avtomobilsozlikda, qurilish ishlarida, maishiy konditsionerlar, muzlatgichlar, shuningdek, isitish uskunalari ishlab chiqarishda foydalaniladigan mis quvurlar ishlab chiqaruvchi zavod qurilishi Markaziy Osiyo bozorini rivojlantirish yo‘lidagi dastlabki qadamlardan biri bo‘ldi. suv ta'minoti va gaz ta'minoti tizimlari.",
+      "desk": "Faoliyat mijozlar ehtiyojlarini qondirish, ishda moslashuvchanlik va yangi mahsulotlar, echimlar va xizmatlarni ishlab chiqishda innovatsiyalarga asoslangan. Infinity Copper Group tarixi 2010 yilda boshlangan. Kundalik hayotda, avtomobilsozlikda, qurilish ishlarida, maishiy konditsionerlar, muzlatgichlar, shuningdek, isitish uskunalari ishlab chiqarishda foydalaniladigan mis quvurlar ishlab chiqaruvchi zavod qurilishi Markaziy Osiyo bozorini rivojlantirish yo‘lidagi dastlabki qadamlardan biri bo‘ldi. Suv ta'minoti va gaz ta'minoti tizimlari.",
       "img": "https://icg.uz/media/images/about-3.jpg",
       "title": "Infinity Copper Group Markaziy Osiyoda yuqori sifatli mis quvurlari yetkazib beruvchi yetakchi hisoblanadi.",
       "ltr": false
@@ -118,8 +118,8 @@
 
   "exports": {
     "header": {
-      "subtitle": "ICG companiyasi jahon bozorida",
-      "title": "Exportlarimiz"
+      "subtitle": "ICG kompaniyasi jahon bozorida",
+      "title": "Eksportlarimiz"
     },
     "description": "ICG kompaniyasi o‘zining mis quvurlari va boshqa mahsulotlarini dunyoning ko‘plab davlatlariga muvaffaqiyatli eksport qiladi. Kompaniya mahsulotlari yuqori sifatga ega bo‘lib, global talabga mos ravishda ishlab chiqariladi. ICG xalqaro bozorda ishonchli hamkor sifatida tan olingan va ko‘plab davlatlarga uzluksiz yetkazib beradi. Eksport hajmi kompaniyaning raqobatbardoshligini oshiradi va keng miqyosda qo‘llaniladi.",
     "map": "https://www.google.com/maps/d/embed?mid=1t8w5jWUhQ4Q5JXzxIJgbGMGVJadiLio&ehbc=2E312F"
@@ -127,8 +127,8 @@
 
   "manuals": {
     "header": {
-      "subtitle": "ICG companiyasi jahon bozorida",
-      "title": "Exportlarimiz"
+      "subtitle": "ICG kompaniyasi jahon bozorida",
+      "title": "Eksportlarimiz"
     },
     "description": "ICG kompaniyasi o‘zining mis quvurlari va boshqa mahsulotlarini dunyoning ko‘plab davlatlariga muvaffaqiyatli eksport qiladi. Kompaniya mahsulotlari yuqori sifatga ega bo‘lib, global talabga mos ravishda ishlab chiqariladi. ICG xalqaro bozorda ishonchli hamkor sifatida tan olingan va ko‘plab davlatlarga uzluksiz yetkazib beradi. Eksport hajmi kompaniyaning raqobatbardoshligini oshiradi va keng miqyosda qo‘llaniladi.",
     "catalogue": {
@@ -140,14 +140,14 @@
 
   "team": {
     "header": {
-      "title": "Bining jamoamiz",
-      "description": "Bizning jamoamizda o'zaro xamkorlik, o'zaro tushunish, o'zaro ishonch kuchli. Biz birgalikda ishlaymiz, birgalikda yutuqlarga erishamiz. Bizning jamoamizda katta yoshdagi tajribali mutaxassislardan tortib yoshlar va talabalarga qadar bo'lgan barcha kasblarga ega bo'lgan insonlar ishlaydi."
+      "title": "Bizning jamoamiz",
+      "description": "Bizning jamoamizda o‘zaro hamkorlik, o‘zaro tushunish va ishonch kuchli. Biz birgalikda ishlaymiz, birgalikda yutuqlarga erishamiz. Bizning jamoamizda katta yoshdagi tajribali mutaxassislardan tortib yoshlar va talabalarga qadar bo‘lgan barcha kasblarga ega insonlar ishlaydi."
     }
   },
 
   "products": {
     "title": "Mahsulotlarimiz",
-    "subtitle": "Jahon standartlarifagi maxsulotlar",
+    "subtitle": "Jahon standartlaridagi mahsulotlar",
     "description": "ICG.UZ kompaniyasi zamonaviy texnologiyalarga asoslangan yuqori sifatli mahsulotlar va yechimlar taklif etadi. Ular mijozlar ehtiyojlarini qondirish uchun moslashuvchan va innovatsion xizmatlarni taqdim etishga intiladi. Kompaniya mahsulotlari har bir mijozga individual yondashuv bilan ishlab chiqiladi, bu esa ularning ishonchini qozonishga yordam beradi.",
     "link_text": "Olish",
     "steps-finish": {
@@ -157,15 +157,17 @@
     "image": {
       "src": "https://icg.uz/media/images/about-1.jpg",
       "alt": "step"
-    }
+    },
+    "choiceProduct": "Mahsulotni tanlang:",
+    "choiceStandard": "Standartni tanlang:"
   },
 
   "contact": {
     "title": "Aloqa",
-    "description": "Biz bilan bog'lanishingiz yoki be'pul maslaxat olishingiz mumkun.",
+    "description": "Biz bilan bog‘lanishingiz yoki bepul maslahat olishingiz mumkin.",
     "location": {
       "heading": "Manzil",
-      "address": "Toshkent shahar, Yashnobod tumani, Elbek ko`chasi, 61-uy (do`stlik metrosi tarafidan, oldingi Chkalova metrosi)"
+      "address": "Toshkent shahar, Yashnobod tumani, Elbek ko‘chasi, 61-uy (Do‘stlik metrosi tarafidan, oldingi Chkalova metrosi)"
     },
     "contact_info": {
       "email": {
@@ -203,7 +205,7 @@
         }
       ],
       "button": {
-        "text": "Jo'natish"
+        "text": "Jo‘natish"
       }
     }
   },
@@ -217,7 +219,7 @@
 
   "news": {
     "empty": {
-      "title": "Yangiliklar majud emas",
+      "title": "Yangiliklar mavjud emas",
       "description": "Biz sizni yangiliklar bilan tanishtiramiz. Ammo hozirgi vaqtda hech qanday yangiliklar mavjud emas. Iltimos, kelajakda qaytib tashrif buyuring."
     }
   },
@@ -235,6 +237,14 @@
       "max": "Maksimal",
       "ft": "ft",
       "m": "m"
+    }
+  },
+
+  "elbow": {
+    "headers": {
+      "product": "Mahsulot",
+      "en_standard": "EN Standart",
+      "astmb_standard": "ASTMB Standart"
     }
   }
 }

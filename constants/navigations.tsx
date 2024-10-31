@@ -21,7 +21,7 @@ export const NavigationsItems = {
           priority: 0.8,
         },
         {
-          title: "Export",
+          title: "Eksport",
           path: "/export",
           priority: 0.8,
         },
@@ -39,7 +39,7 @@ export const NavigationsItems = {
     },
     {
       isSub: false,
-      title: "Maxsulotlarimiz",
+      title: "Mahsulotlarimiz",
       path: "/products",
       priority: 1,
     },

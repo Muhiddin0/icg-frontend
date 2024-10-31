@@ -92,13 +92,13 @@
         {
           "value": 10,
           "unit": "+",
-          "description": "Extensive Experience"
+          "description": "Years of Experience"
         }
       ]
     },
     "aboutInfoFirst": {
       "status": "History of ICG",
-      "desk": "Our activities are based on meeting customer needs, flexibility in work, and innovations in developing new products, solutions, and services. The history of Infinity Copper Group began in 2010. The construction of a plant for the production of copper pipes used in daily life, automotive, construction, and in the manufacture of household air conditioners, refrigerators, and heating devices was the first step in the development of the Central Asian market for water and gas supply systems.",
+      "desk": "Our activities are based on meeting customer needs, flexibility in work, and innovations in developing new products, solutions, and services. The history of Infinity Copper Group began in 2010 with the construction of a plant for producing copper pipes used in daily life, automotive, construction, and in the manufacture of household air conditioners, refrigerators, and heating devices. This was the first step in developing the Central Asian market for water and gas supply systems.",
       "img": "https://icg.uz/media/images/about-3.jpg",
       "title": "Infinity Copper Group is a leading supplier of high-quality copper pipes in Central Asia.",
       "ltr": false
@@ -153,7 +153,9 @@
     "steps-finish": {
       "title": "Reliable Partnership",
       "description": "The company ensures long-term reliable partnerships through quality products and services."
-    }
+    },
+    "choiceProduct": "Choose a product:",
+    "choiceStandard": "Choose a standard:"
   },
 
   "contact": {
@@ -173,7 +175,7 @@
         "link": "+998 99 811 72 22"
       },
       "local_phone": {
-        "heading": "Local",
+        "heading": "Local Phone",
         "link": "+998 98 300 00 62"
       }
     },
@@ -226,6 +228,13 @@
       "max": "Max",
       "ft": "ft",
       "m": "m"
+    }
+  },
+  "elbow": {
+    "headers": {
+      "product": "Product",
+      "en_standard": "EN Standard",
+      "astmb_standard": "ASTMB Standard"
     }
   }
 }
