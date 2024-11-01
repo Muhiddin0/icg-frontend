@@ -150,7 +150,8 @@
     },
 
     "choiceProduct": "Выберите продукт:",
-    "choiceStandard": "Выберите стандарт:"
+    "choiceStandard": "Выберите стандарт:",
+    "addShopCard": "Добавить в корзину"
   },
   "contact": {
     "title": "Контакт",

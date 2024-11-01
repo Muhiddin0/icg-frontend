@@ -155,7 +155,8 @@
       "description": "The company ensures long-term reliable partnerships through quality products and services."
     },
     "choiceProduct": "Choose a product:",
-    "choiceStandard": "Choose a standard:"
+    "choiceStandard": "Choose a standard:",
+    "addShopCard": "Add to cart"
   },
 
   "contact": {

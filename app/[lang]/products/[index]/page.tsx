@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 import { MainProductsItems } from "@/constants/products";
 import Calc from "@/app/[lang]/ui/calc/calc";
@@ -6,6 +8,10 @@ import { Lang } from "@/types/types";
 import ProductTableGenrator from "../../ui/table/table";
 import { TableData } from "@/constants/coil";
 import FitftingCoil from "../../ui/calc/fifting";
+import { useTranslations } from "next-intl";
+import { time } from "console";
+import { ShoppingCart } from "lucide-react";
+import clsx from "clsx";
 
 type Props = {
   params: {
@@ -14,8 +20,25 @@ type Props = {
   };
 };
 
+export type ProductType = {
+  name: string;
+  "outer-diameter": string;
+  "diameter-in-mm": string;
+  "wall-thickness": string;
+  "unit-weight": string;
+  length: string;
+  weight: string;
+};
+
 const ProductDetail = ({ params: { index, lang } }: Props) => {
   const product = MainProductsItems[lang][+index];
+  const [selectedProduct, setSelectedProduct] = useState<ProductType | null>();
+
+  const t = useTranslations("products");
+
+  function handleShop() {
+    console.log("🚀 ~ ProductDetail ~ selectedProduct:", selectedProduct);
+  }
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
@@ -35,10 +58,26 @@ const ProductDetail = ({ params: { index, lang } }: Props) => {
             <p className="leading-relaxed">{product.description}</p>
 
             {product.tcode_fit && <FitftingCoil />}
-            {product.tcode && <Calc product={product.tcode as any} />}
+            {product.tcode && (
+              <Calc
+                setSelectedProduct={setSelectedProduct}
+                product={product.tcode as any}
+              />
+            )}
             <div className="flex">
-              <button className="flex ml-auto text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary/50 rounded">
-                Button
+              <button
+                disabled={!selectedProduct}
+                onClick={handleShop}
+                className={clsx(
+                  "flex gap-2  ml-auto text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary/50 rounded",
+                  {
+                    "opacity-60": !selectedProduct,
+                  }
+                )}
+              >
+                <ShoppingCart />
+
+                {t("addShopCard")}
               </button>
             </div>
           </div>

@@ -161,32 +161,6 @@ export const TableData = {
   "Pancake Coil": {
     "outer-diameter": {
       "3/16": {
-        "4.76": {
-          "wall-thickness": {
-            min: {
-              in: 0.014,
-              mm: 0.35,
-            },
-            max: {
-              in: 0.039,
-              mm: 1.0,
-            },
-          },
-          "unit-weight": {
-            min: {
-              "lb/ft": 0.028,
-              "kg/m": 0.043,
-            },
-            max: {
-              "lb/ft": 0.071,
-              "kg/m": 0.105,
-            },
-          },
-          length: {
-            ft: "49.21-164.04",
-            m: "15-50",
-          },
-        },
         "5.00": {
           "wall-thickness": {
             min: {

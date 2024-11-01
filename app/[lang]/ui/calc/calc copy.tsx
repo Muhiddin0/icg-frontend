@@ -68,31 +68,38 @@ const Calc = ({
       <label className="col-span-full grid gap-1">
         <p>Outer Diameter</p>
         <select
-          onChange={(e) => {
-            let value = e.target.value.split("-");
-            setOuthDiametr(value[0] as outhDiametrType);
-            setOuthDiametrMm(value[1] as outhDiametrMmType);
-          }}
+          onChange={(e) => setOuthDiametr(e.target.value as outhDiametrType)}
           className="select select-bordered"
         >
           <option value="">Select Outer Diameter</option>
+          {Object.keys(TableData["Pancake Coil"]["outer-diameter"]).map(
+            (key) => (
+              <option key={key} value={key}>
+                {key}
+              </option>
+            )
+          )}
+        </select>
+      </label>
 
-          {Object.keys(TableData[product]["outer-diameter"]).map((outerKey) => {
-            return Object.keys(
-              TableData[product]["outer-diameter"][
-                outerKey as outhDiametrMmType
-              ]
-            ).map((innerKey) => {
-              return (
-                <option
-                  key={`${outerKey}-${innerKey}`}
-                  value={`${outerKey}-${innerKey}`}
-                >
-                  In {outerKey}, Mm {innerKey}
-                </option>
-              );
-            });
-          })}
+      <label className="col-span-1 grid gap-1">
+        <p>Diameter in mm</p>
+        <select
+          onChange={(e) =>
+            setOuthDiametrMm(e.target.value as outhDiametrMmType)
+          }
+          className="select select-bordered"
+          disabled={!outhDiametr}
+        >
+          <option value="">Select Diameter in mm</option>
+          {outhDiametr &&
+            Object.keys(
+              TableData["Pancake Coil"]["outer-diameter"][outhDiametr]
+            ).map((key) => (
+              <option key={key} value={key}>
+                {key}
+              </option>
+            ))}
         </select>
       </label>
 
@@ -114,18 +121,18 @@ const Calc = ({
               ]
             ).map((key) => (
               <option key={key} value={key}>
-                In{" "}
-                {JSON.stringify(
-                  TableData[product]["outer-diameter"][outhDiametr][
-                    outhDiametrMm
-                  ]["wall-thickness"][key]["in"]
-                )}
-                , Mm{" "}
+                mm{" "}
                 {JSON.stringify(
                   TableData[product]["outer-diameter"][outhDiametr][
                     outhDiametrMm
                   ]["wall-thickness"][key]["mm"]
                 )}{" "}
+                in{" "}
+                {JSON.stringify(
+                  TableData[product]["outer-diameter"][outhDiametr][
+                    outhDiametrMm
+                  ]["wall-thickness"][key]["in"]
+                )}
               </option>
             ))}
         </select>
@@ -173,9 +180,7 @@ const Calc = ({
         />
       </label>
 
-      <div className="col-span-full mb-5">
-        {result && <p className="mt-4 text-lg">{result}</p>}
-      </div>
+      <div>{result && <p className="mt-4 text-lg">{result}</p>}</div>
     </div>
   );
 };
