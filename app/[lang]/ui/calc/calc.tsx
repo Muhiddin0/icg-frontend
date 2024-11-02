@@ -3,6 +3,8 @@
 import { TableData } from "@/constants/coil";
 import React, { useEffect, useState } from "react";
 import { ProductType } from "../../products/[index]/page";
+import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 type outhDiametrType =
   keyof (typeof TableData)["Pancake Coil"]["outer-diameter"];
@@ -10,15 +12,20 @@ type outhDiametrType =
 type outhDiametrMmType =
   keyof (typeof TableData)["Pancake Coil"]["outer-diameter"][outhDiametrType];
 
-type wallThicknessType =
-  keyof (typeof TableData)["Pancake Coil"]["outer-diameter"][outhDiametrMmType]["wall-thickness"];
+type wallThickness = {
+  in: number;
+  mm: number;
+};
 
-type unitWeightType =
-  keyof (typeof TableData)["Pancake Coil"]["outer-diameter"][outhDiametrMmType]["unit-weight"];
+type unitWeight = {
+  "lb/ft": number;
+  "kg/m": number;
+};
+
+type TotalLength = number;
 
 const Calc = ({
   product,
-  setSelectedProduct,
 }: {
   product: keyof typeof TableData;
   setSelectedProduct: React.Dispatch<
@@ -27,154 +34,290 @@ const Calc = ({
 }) => {
   const [outhDiametr, setOuthDiametr] = useState<outhDiametrType>();
   const [outhDiametrMm, setOuthDiametrMm] = useState<outhDiametrMmType>();
-  const [wallThickness, setWallThickness] = useState<wallThicknessType>();
-  const [unitWeight, setUnitWeight] = useState<unitWeightType>();
-  const [length, setLength] = useState<number | null>();
-  const [result, setResult] = useState<string | null>(
-    "Please select all options and enter length."
-  );
+  const [wallThickness, setWallThickness] = useState<wallThickness>({
+    in: 0,
+    mm: 0,
+  });
+  const [unitWeight, setUnitWeight] = useState<unitWeight>({
+    "lb/ft": 0,
+    "kg/m": 0,
+  });
 
-  const calculateWeight = () => {
-    if (outhDiametr && outhDiametrMm && wallThickness && unitWeight && length) {
-      const weightPerMeter =
-        TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
-          "unit-weight"
-        ][unitWeight as keyof typeof unitWeight]["kg/m"];
-      const totalWeight = weightPerMeter * length;
-      setResult(`Total Weight: ${totalWeight.toFixed(2)} kg`);
+  const [wallThicknessIsError, setWallThicknessIsError] =
+    useState<boolean>(false);
+  const [unitWeightIsError, setUnitWeightIsError] = useState<boolean>(false);
 
-      setSelectedProduct({
-        name: product,
-        "outer-diameter": outhDiametr,
-        "diameter-in-mm": outhDiametrMm,
-        "wall-thickness": wallThickness as string,
-        "unit-weight": unitWeight as string,
-        length: length?.toString() || "",
-        weight: totalWeight.toFixed(2) + " kg",
-      });
+  const [length, setLength] = useState<TotalLength | null>(null);
+
+  const [totalWeight, setTotalWeight] = useState<{
+    lb: string;
+    kg: string;
+  } | null>(null);
+
+  const t = useTranslations("calc");
+
+  function calculateTotalWeight() {
+    if (length && unitWeight["kg/m"] && unitWeight["lb/ft"]) {
+      const weightKg = length * unitWeight["kg/m"];
+      const weightLb = weightKg * 2.20462;
+      setTotalWeight({ lb: weightLb.toFixed(2), kg: weightKg.toFixed(2) });
     } else {
-      setResult("Please select all options and enter length.");
+      setTotalWeight(null);
     }
-  };
+  }
+
+  function convertLength(
+    length: number,
+    direction: "mmToIn" | "inToMm"
+  ): number {
+    return direction === "mmToIn" ? length / 25.4 : length * 25.4;
+  }
+
+  function convertWeight(
+    weight: number,
+    direction: "lbToKg" | "kgToLb"
+  ): number {
+    return direction === "lbToKg" ? weight * 0.453592 : weight / 0.453592;
+  }
 
   useEffect(() => {
-    calculateWeight();
+    calculateTotalWeight();
+
+    if (outhDiametr && outhDiametrMm) {
+      if (
+        wallThickness.in >
+          Number(
+            TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+              "wall-thickness"
+            ]["max"]["in"]
+          ) ||
+        wallThickness.in <
+          Number(
+            TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+              "wall-thickness"
+            ]["min"]["in"]
+          )
+      ) {
+        setWallThicknessIsError(true);
+      } else {
+        setWallThicknessIsError(false);
+      }
+
+      if (
+        unitWeight["lb/ft"] >
+          Number(
+            TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+              "unit-weight"
+            ]["max"]["lb/ft"]
+          ) ||
+        unitWeight["lb/ft"] <
+          Number(
+            TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+              "unit-weight"
+            ]["min"]["lb/ft"]
+          )
+      ) {
+        setUnitWeightIsError(true);
+      } else {
+        setUnitWeightIsError(false);
+      }
+    }
   }, [outhDiametr, outhDiametrMm, wallThickness, unitWeight, length]);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-6">
-      <h1 className="col-span-full">Pancake Coil Calculator</h1>
-
       <label className="col-span-full grid gap-1">
-        <p>Outer Diameter</p>
+        <p>{t("outerDiameter")}</p>
         <select
           onChange={(e) => {
-            let value = e.target.value.split("-");
+            const value = e.target.value.split("-");
             setOuthDiametr(value[0] as outhDiametrType);
             setOuthDiametrMm(value[1] as outhDiametrMmType);
           }}
           className="select select-bordered"
         >
           <option value="">Select Outer Diameter</option>
-
           {Object.keys(TableData[product]["outer-diameter"]).map((outerKey) => {
             return Object.keys(
               TableData[product]["outer-diameter"][
                 outerKey as outhDiametrMmType
               ]
-            ).map((innerKey) => {
-              return (
-                <option
-                  key={`${outerKey}-${innerKey}`}
-                  value={`${outerKey}-${innerKey}`}
-                >
-                  In {outerKey}, Mm {innerKey}
-                </option>
-              );
-            });
+            ).map((innerKey) => (
+              <option
+                key={`${outerKey}-${innerKey}`}
+                value={`${outerKey}-${innerKey}`}
+              >
+                In {outerKey}, Mm {innerKey}
+              </option>
+            ));
           })}
         </select>
       </label>
 
-      <label className="col-span-1 grid gap-1">
-        <p>Wall Thickness</p>
-        <select
-          onChange={(e) =>
-            setWallThickness(e.target.value as wallThicknessType)
-          }
-          className="select select-bordered"
-          disabled={!outhDiametrMm || !outhDiametr}
-        >
-          <option value="">Select Wall Thickness</option>
-          {outhDiametrMm &&
-            outhDiametr &&
-            Object.keys(
+      <div className="grid grid-cols-2 col-span-full gap-3">
+        <div className="col-span-full">
+          <p>{t("wallThickness")}</p>
+        </div>
+
+        <label className="col-span-1 grid gap-1">
+          <p>
+            (In) Max{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
               TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
                 "wall-thickness"
-              ]
-            ).map((key) => (
-              <option key={key} value={key}>
-                In{" "}
-                {JSON.stringify(
-                  TableData[product]["outer-diameter"][outhDiametr][
-                    outhDiametrMm
-                  ]["wall-thickness"][key]["in"]
-                )}
-                , Mm{" "}
-                {JSON.stringify(
-                  TableData[product]["outer-diameter"][outhDiametr][
-                    outhDiametrMm
-                  ]["wall-thickness"][key]["mm"]
-                )}{" "}
-              </option>
-            ))}
-        </select>
-      </label>
+              ]["max"]["in"]}
+            , Min{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
+              TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+                "wall-thickness"
+              ]["min"]["in"]}
+          </p>
+          <input
+            type="number"
+            className="input input-bordered"
+            onChange={(e) => {
+              const inValue = +e.target.value;
+              setWallThickness((prev) => ({
+                in: inValue,
+                mm: convertLength(inValue, "inToMm"),
+              }));
+            }}
+            disabled={!outhDiametrMm || !outhDiametr}
+            value={wallThickness.in}
+          />
+        </label>
 
-      <label className="col-span-1 grid gap-1">
-        <p>Unit Weight</p>
-        <select
-          onChange={(e) => setUnitWeight(e.target.value as unitWeightType)}
-          className="select select-bordered"
-          disabled={!outhDiametrMm || !outhDiametr}
+        <label className="col-span-1 grid gap-1">
+          <p>
+            (Mm) Max{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
+              TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+                "wall-thickness"
+              ]["max"]["mm"]}
+            , Min{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
+              TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+                "wall-thickness"
+              ]["min"]["mm"]}
+          </p>
+          <input
+            type="number"
+            className="input input-bordered"
+            onChange={(e) => {
+              const mmValue = +e.target.value;
+              setWallThickness((prev) => ({
+                in: convertLength(mmValue, "mmToIn"),
+                mm: mmValue,
+              }));
+            }}
+            disabled={!outhDiametrMm || !outhDiametr}
+            value={wallThickness.mm}
+          />
+        </label>
+
+        <p
+          className={clsx("text-red-500", {
+            "opacity-0": !wallThicknessIsError,
+            "opacity-100": !!wallThicknessIsError,
+          })}
         >
-          <option value="">Select Unit Weight</option>
-          {outhDiametrMm &&
-            outhDiametr &&
-            Object.keys(
+          {t("error")}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 col-span-full gap-3">
+        <div className="col-span-full">
+          <p>{t("unitWeight")}</p>
+        </div>
+        <label className="col-span-1 grid gap-1">
+          <p>
+            (lb/ft) Max{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
               TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
                 "unit-weight"
-              ]
-            ).map((key) => (
-              <option key={key} value={key}>
-                lb/ft{" "}
-                {JSON.stringify(
-                  TableData[product]["outer-diameter"][outhDiametr][
-                    outhDiametrMm
-                  ]["unit-weight"][key]["lb/ft"]
-                )}{" "}
-                kg/m{" "}
-                {JSON.stringify(
-                  TableData[product]["outer-diameter"][outhDiametr][
-                    outhDiametrMm
-                  ]["unit-weight"][key]["kg/m"]
-                )}
-              </option>
-            ))}
-        </select>
-      </label>
+              ]["max"]["lb/ft"]}
+            , Min{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
+              TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+                "unit-weight"
+              ]["min"]["lb/ft"]}
+          </p>
+
+          <input
+            type="number"
+            className="input input-bordered"
+            onChange={(e) => {
+              const lbValue = +e.target.value;
+              setUnitWeight({
+                "lb/ft": lbValue,
+                "kg/m": convertWeight(lbValue, "lbToKg"),
+              });
+            }}
+            disabled={!outhDiametrMm || !outhDiametr}
+            value={unitWeight["lb/ft"]}
+          />
+        </label>
+        <label className="col-span-1 grid gap-1">
+          <p>
+            (Kg/m) Max{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
+              TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+                "unit-weight"
+              ]["max"]["kg/m"]}
+            , Min{" "}
+            {outhDiametr &&
+              outhDiametrMm &&
+              TableData[product]["outer-diameter"][outhDiametr][outhDiametrMm][
+                "unit-weight"
+              ]["min"]["kg/m"]}
+          </p>{" "}
+          <input
+            type="number"
+            className="input input-bordered"
+            onChange={(e) => {
+              const kgValue = +e.target.value;
+              setUnitWeight({
+                "kg/m": kgValue,
+                "lb/ft": convertWeight(kgValue, "kgToLb"),
+              });
+            }}
+            disabled={!outhDiametrMm || !outhDiametr}
+            value={unitWeight["kg/m"]}
+          />
+        </label>
+
+        <p
+          className={clsx("text-red-500", {
+            "opacity-0": !unitWeightIsError,
+            "opacity-100": !!unitWeightIsError,
+          })}
+        >
+          {t("error")}
+        </p>
+      </div>
 
       <label className="col-span-1 grid gap-1">
-        <p>Length (m)</p>
+        <p>{t("length")}</p>
         <input
+          disabled={!outhDiametrMm || !outhDiametr}
           type="number"
           className="input input-bordered w-full"
           onChange={(e) => setLength(parseFloat(e.target.value))}
         />
       </label>
 
-      <div className="col-span-full mb-5">
-        {result && <p className="mt-4 text-lg">{result}</p>}
+      <div className="col-span-full">
+        <ul>
+          <li>lb/ft: {totalWeight?.lb}</li>
+          <li>kg/m: {totalWeight?.kg}</li>
+        </ul>
       </div>
     </div>
   );

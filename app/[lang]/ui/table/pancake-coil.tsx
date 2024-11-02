@@ -14,7 +14,7 @@ const CoilTable = () => {
           <thead>
             <tr className="bg-primary text-white">
               <th className="p-4 border">{t("tableHeaders.outerDiameter")}</th>
-              <th className="p-4 border">{t("tableHeaders.size")}</th>
+              <th className="p-4 border">{t("tableHeaders.size")} mm</th>
               <th className="p-4 border">{t("tableHeaders.wallThickness")}</th>
               <th className="p-4 border">{t("tableHeaders.unitWeight")}</th>
               <th className="p-4 border">{t("tableHeaders.length")}</th>

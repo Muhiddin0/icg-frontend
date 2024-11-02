@@ -237,5 +237,22 @@
       "en_standard": "EN Standard",
       "astmb_standard": "ASTMB Standard"
     }
+  },
+
+  "calc": {
+    "outerDiameter": "Outer Diameter",
+    "selectOuterDiameter": "Select Outer Diameter",
+    "wallThickness": "Wall Thickness",
+    "wallThicknessIn": "(In) Max",
+    "wallThicknessMin": "Min",
+    "error": "Enter a valid value",
+    "unitWeight": "Unit Weight",
+    "unitWeightLbFtMax": "(lb/ft) Max",
+    "unitWeightLbFtMin": "Min",
+    "unitWeightKgMMax": "(Kg/m) Max",
+    "unitWeightKgMMin": "Min",
+    "length": "Length (m)",
+    "totalWeightLb": "lb/ft:",
+    "totalWeightKg": "kg/m:"
   }
 }

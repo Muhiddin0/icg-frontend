@@ -247,5 +247,22 @@
       "en_standard": "EN Standart",
       "astmb_standard": "ASTMB Standart"
     }
+  },
+
+  "calc": {
+    "outerDiameter": "Tashqi diametr",
+    "selectOuterDiameter": "Tashqi diametrni tanlang",
+    "wallThickness": "Devor qalinligi",
+    "wallThicknessIn": "(In) Maks.",
+    "wallThicknessMin": "Min",
+    "error": "To'g'ri qiymat kiriting",
+    "unitWeight": "Birlik og'irligi",
+    "unitWeightLbFtMax": "(lb/ft) Maks.",
+    "unitWeightLbFtMin": "Min",
+    "unitWeightKgMMax": "(Kg/m) Maks.",
+    "unitWeightKgMMin": "Min",
+    "length": "Uzunlik (m)",
+    "totalWeightLb": "lb/ft:",
+    "totalWeightKg": "kg/m:"
   }
 }

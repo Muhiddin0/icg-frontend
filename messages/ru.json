@@ -208,5 +208,22 @@
       "en_standard": "EN Standard",
       "astmb_standard": "ASTMB Standard"
     }
+  },
+
+  "calc": {
+    "outerDiameter": "Внешний диаметр",
+    "selectOuterDiameter": "Выберите внешний диаметр",
+    "wallThickness": "Толщина стенки",
+    "wallThicknessIn": "(In) Макс.",
+    "wallThicknessMin": "Мин",
+    "error": "Введите правильное значение",
+    "unitWeight": "Удельный вес",
+    "unitWeightLbFtMax": "(lb/ft) Макс.",
+    "unitWeightLbFtMin": "Мин",
+    "unitWeightKgMMax": "(Kg/m) Макс.",
+    "unitWeightKgMMin": "Мин",
+    "length": "Длина (м)",
+    "totalWeightLb": "lb/ft:",
+    "totalWeightKg": "кг/м:"
   }
 }

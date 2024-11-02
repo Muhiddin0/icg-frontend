@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../common/section-title/section-title";
 import { useTranslations } from "next-intl";
+import TradingViewWidget from "./test";
 
 function Chart() {
   const t = useTranslations("home.chart");
