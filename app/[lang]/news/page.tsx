@@ -1,79 +1,85 @@
 "use client";
 
 import { instance } from "@/services/axios";
-import { ArticlesResponse } from "@/types/types";
+import { ArticlesResponse } from "@/types/articles";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import DateUi from "../ui/time";
 import { MoveRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import EmptyAnimation from "../ui/empty/empty";
+import { Lang } from "@/types/lang";
 
-function NewsPage() {
-  const { data } = useQuery<ArticlesResponse>({
-    queryFn: async () => {
-      const { data } = await instance.get("/articles/");
+function NewsPage({ params: { lang } }: { params: { lang: Lang } }) {
+    instance.defaults.headers.common["Accept-Language"] = lang;
 
-      return data;
-    },
-    queryKey: ["articles"],
-  });
+    const { data } = useQuery<ArticlesResponse>({
+        queryFn: async () => {
+            const { data } = await instance.get("/articles/");
 
-  // const images = data.results.map(({ poster, desk }) => ({
-  //   url: poster,
-  //   width: 1200,
-  //   height: 630,
-  //   alt: desk,
-  // }));
+            return data;
+        },
+        queryKey: ["articles"],
+    });
 
-  // defaultSEOConfig.openGraph.images = images;
+    // const images = data.results.map(({ poster, desk }) => ({
+    //   url: poster,
+    //   width: 1200,
+    //   height: 630,
+    //   alt: desk,
+    // }));
 
-  return (
-    <>
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap -m-4">
-            {data ? (
-              data.results.map(
-                ({ created_at, desk, id, poster, title, updated_at }) => (
-                  <div className="p-4 md:w-1/3">
-                    <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                      <img
-                        className="lg:h-48 md:h-36 w-full object-cover object-center"
-                        src={poster}
-                        alt={title}
-                      />
-                      <div className="p-6">
-                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                          {title}
-                        </h1>
-                        <p className="leading-relaxed mb-3 line-clamp-3">
-                          {desk}
-                        </p>
-                        <div className="flex items-center justify-between flex-wrap">
-                          <DateUi dateString={created_at} />
+    // defaultSEOConfig.openGraph.images = images;
 
-                          <Link
-                            href={`/news/${id}`}
-                            className="text-primary inline-flex items-center gap-2 md:mb-2 lg:mb-0"
-                          >
-                            O'qish
-                            <MoveRight />
-                          </Link>
-                        </div>
-                      </div>
+    return (
+        <>
+            <section className="text-gray-600 body-font">
+                <div className="container px-5 py-24 mx-auto">
+                    <div className="flex flex-wrap -m-4">
+                        {data && data.results.length ? (
+                            data.results.map(
+                                ({ created_at, desk, id, poster, title }) => (
+                                    <div className="p-4 md:w-1/3">
+                                        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                                            <img
+                                                className="lg:h-48 md:h-36 w-full object-cover object-center"
+                                                src={poster}
+                                                alt={title}
+                                            />
+                                            <div className="p-6">
+                                                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                                    {title}
+                                                </h1>
+                                                <p className="leading-relaxed mb-3 line-clamp-3">
+                                                    {desk}
+                                                </p>
+                                                <div className="flex items-center justify-between flex-wrap">
+                                                    <DateUi
+                                                        lang={lang}
+                                                        dateString={created_at}
+                                                    />
+
+                                                    <Link
+                                                        href={`/news/${id}`}
+                                                        className="text-primary inline-flex items-center gap-2 md:mb-2 lg:mb-0"
+                                                    >
+                                                        O'qish
+                                                        <MoveRight />
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            )
+                        ) : (
+                            <EmptyAnimation />
+                        )}
                     </div>
-                  </div>
-                )
-              )
-            ) : (
-              <EmptyAnimation />
-            )}
-          </div>
-        </div>
-      </section>
-    </>
-  );
+                </div>
+            </section>
+        </>
+    );
 }
 
 export default NewsPage;

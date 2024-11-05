@@ -1,258 +1,262 @@
 {
-  "home": {
-    "hero": {
-      "welcome_message": "Welcome to ICG!",
-      "main_heading": "Creating Value",
-      "description": "We provide high-quality products that will serve you well for a long time!",
-      "about_us_button": "About Us"
+    "home": {
+        "hero": {
+            "welcome_message": "Welcome to ICG!",
+            "main_heading": "Creating Value",
+            "description": "We provide high-quality products that will serve you well for a long time!",
+            "about_us_button": "About Us"
+        },
+        "chart": {
+            "title": "Price Dynamics",
+            "description": "The chart shows the price change of copper over the past day. This dynamic data helps investors and industry representatives analyze the current and future value of copper."
+        },
+        "about": {
+            "about_title": "About Us",
+            "about_description": "Infinity Copper Group is a leading supplier of high-quality copper pipes in Central Asia. Our business is based on meeting customer needs, flexibility in work, and developing new products, solutions, and services based on innovation.",
+            "more_info_button": "Learn More"
+        },
+        "products": {
+            "sectionTitle": {
+                "title": "Our Products",
+                "description": "ICG.UZ offers high-quality products and solutions based on modern technologies. We strive to provide flexible and innovative services to meet customer needs. Our products are developed with a personalized approach to each client, helping us earn their trust."
+            },
+            "productCard": {
+                "buttonText": "Buy Now"
+            },
+            "count": "Count"
+        },
+        "partners": {
+            "sectionTitle": {
+                "title": "Our Partners",
+                "description": "Our partners are reliable colleagues working with us. Collaboration with them is of great importance to our company."
+            }
+        },
+        "latestNews": {
+            "sectionTitle": {
+                "title": "Latest News",
+                "description": "The latest news includes information about new products, services, and achievements of our company. Here you can also find articles, interviews, and other news from our experts and partners."
+            },
+            "button": {
+                "readMore": "Read More"
+            }
+        },
+        "contact": {
+            "sectionTitle": {
+                "title": "Contact Us",
+                "description": "We are happy to hear your messages and suggestions. Please contact us using the form below."
+            },
+            "contactForm": {
+                "heading": "Contact",
+                "description": "You can reach us or get a free consultation.",
+                "emailOrPhone": "Email or Phone",
+                "message": "Message",
+                "submitButton": "Send"
+            }
+        }
     },
-    "chart": {
-      "title": "Price Dynamics",
-      "description": "The chart shows the price change of copper over the past day. This dynamic data helps investors and industry representatives analyze the current and future value of copper."
-    },
+
     "about": {
-      "about_title": "About Us",
-      "about_description": "Infinity Copper Group is a leading supplier of high-quality copper pipes in Central Asia. Our business is based on meeting customer needs, flexibility in work, and developing new products, solutions, and services based on innovation.",
-      "more_info_button": "Learn More"
+        "aboutHero": {
+            "imageAlt": "Infinity Copper Group Logo",
+            "title": "Infinity Copper Group",
+            "description": "ICG (Infinity Copper Group) is a leading company in the supply of copper pipes in Uzbekistan. Founded in 2010, it produces copper pipes used in various fields such as automotive, construction, and household appliances. The company offers products based on customer needs and innovations. All products are manufactured from pure mineral raw materials. The company has numerous partners worldwide and prioritizes quality.",
+            "buttons": [
+                {
+                    "label": "Contact",
+                    "icon": "phone"
+                },
+                {
+                    "label": "Get in Touch",
+                    "icon": "mail"
+                }
+            ]
+        },
+        "aboutStatistics": {
+            "title": "Infinity Copper Group",
+            "heading": "Our Achievements",
+            "stats": [
+                {
+                    "value": 5,
+                    "unit": "million+",
+                    "description": "Products Delivered"
+                },
+                {
+                    "value": 100,
+                    "unit": "+",
+                    "description": "Partners Worldwide"
+                },
+                {
+                    "value": 1000,
+                    "unit": "+",
+                    "description": "Satisfied Customers"
+                },
+                {
+                    "value": 10,
+                    "unit": "+",
+                    "description": "Years of Experience"
+                }
+            ]
+        },
+        "aboutInfoFirst": {
+            "status": "History of ICG",
+            "desk": "Our activities are based on meeting customer needs, flexibility in work, and innovations in developing new products, solutions, and services. The history of Infinity Copper Group began in 2010 with the construction of a plant for producing copper pipes used in daily life, automotive, construction, and in the manufacture of household air conditioners, refrigerators, and heating devices. This was the first step in developing the Central Asian market for water and gas supply systems.",
+            "img": "https://icg.uz/media/images/about-3.jpg",
+            "title": "Infinity Copper Group is a leading supplier of high-quality copper pipes in Central Asia.",
+            "ltr": false
+        },
+        "aboutInfoSecond": {
+            "status": "OUR MISSION",
+            "title": "To help our clients find solutions with copper pipes that enable them to obtain relevant products, services, and information.",
+            "img": "https://icg.uz/media/images/about-4.jpg",
+            "desk": "We offer you quality products. By purchasing products from Infinity Copper Group, you can be confident in the reliability of the equipment. All products of Infinity Copper Group are manufactured only from the purest mineral raw materials, without the use of waste or recycled copper. We operate under the brand name 'Infinity Copper Group' throughout the marketing territory. For us, the strength of our brand comes not from words, but from actions. We promise our customers to deliver quality work and strive daily to achieve this goal. We want our clients to recognize Infinity Copper Group as a symbol of innovation, quality, and customer satisfaction. In all our actions, we take into account the needs of our customers.",
+            "ltr": true
+        }
     },
-    "products": {
-      "sectionTitle": {
-        "title": "Our Products",
-        "description": "ICG.UZ offers high-quality products and solutions based on modern technologies. We strive to provide flexible and innovative services to meet customer needs. Our products are developed with a personalized approach to each client, helping us earn their trust."
-      },
-      "productCard": {
-        "buttonText": "Buy Now"
-      }
-    },
+
     "partners": {
-      "sectionTitle": {
-        "title": "Our Partners",
-        "description": "Our partners are reliable colleagues working with us. Collaboration with them is of great importance to our company."
-      }
+        "buttonText": "Learn More"
     },
-    "latestNews": {
-      "sectionTitle": {
-        "title": "Latest News",
-        "description": "The latest news includes information about new products, services, and achievements of our company. Here you can also find articles, interviews, and other news from our experts and partners."
-      },
-      "button": {
-        "readMore": "Read More"
-      }
+
+    "exports": {
+        "header": {
+            "subtitle": "ICG Company in the Global Market",
+            "title": "Our Export Deliveries"
+        },
+        "description": "ICG successfully exports its copper pipes and other products to numerous countries worldwide. The company’s products are distinguished by high quality and are manufactured in accordance with global standards. ICG is recognized as a reliable partner in the international market and makes constant deliveries to many countries. The volume of exports enhances the competitiveness of the company and is widely utilized.",
+        "map": "https://www.google.com/maps/d/embed?mid=1t8w5jWUhQ4Q5JXzxIJgbGMGVJadiLio&ehbc=2E312F"
     },
+
+    "manuals": {
+        "header": {
+            "subtitle": "ICG Company in the Global Market",
+            "title": "Our Export Deliveries"
+        },
+        "description": "ICG successfully exports its copper pipes and other products to numerous countries worldwide. The company’s products are distinguished by high quality and are manufactured in accordance with global standards. ICG is recognized as a reliable partner in the international market and makes constant deliveries to many countries. The volume of exports enhances the competitiveness of the company and is widely utilized.",
+        "catalogue": {
+            "src": "https://icg.uz/static/assets/files/catalogue1.pdf",
+            "type": "application/pdf",
+            "height": "800px"
+        }
+    },
+
+    "team": {
+        "header": {
+            "title": "Our Team",
+            "description": "In our team, there is mutual cooperation, understanding, and trust. We work together and achieve success. Our team consists of people with various professions, from experienced specialists to youth and students."
+        }
+    },
+
+    "products": {
+        "title": "Our Products",
+        "subtitle": "World-Class Products",
+        "description": "ICG.UZ offers high-quality products and solutions based on modern technologies. We strive to provide flexible and innovative services to meet customer needs. Our products are developed with a personalized approach to each client, helping us earn their trust.",
+        "link_text": "Get it",
+        "steps-finish": {
+            "title": "Reliable Partnership",
+            "description": "The company ensures long-term reliable partnerships through quality products and services."
+        },
+        "choiceProduct": "Choose a product:",
+        "choiceStandard": "Choose a standard:",
+        "addShopCard": "Add to cart"
+    },
+
     "contact": {
-      "sectionTitle": {
-        "title": "Contact Us",
-        "description": "We are happy to hear your messages and suggestions. Please contact us using the form below."
-      },
-      "contactForm": {
-        "heading": "Contact",
+        "title": "Contact",
         "description": "You can reach us or get a free consultation.",
-        "emailOrPhone": "Email or Phone",
-        "message": "Message",
-        "submitButton": "Send"
-      }
-    }
-  },
-
-  "about": {
-    "aboutHero": {
-      "imageAlt": "Infinity Copper Group Logo",
-      "title": "Infinity Copper Group",
-      "description": "ICG (Infinity Copper Group) is a leading company in the supply of copper pipes in Uzbekistan. Founded in 2010, it produces copper pipes used in various fields such as automotive, construction, and household appliances. The company offers products based on customer needs and innovations. All products are manufactured from pure mineral raw materials. The company has numerous partners worldwide and prioritizes quality.",
-      "buttons": [
-        {
-          "label": "Contact",
-          "icon": "phone"
+        "location": {
+            "heading": "Address",
+            "address": "Tashkent, Yashnabad District, Elbek Street, Building 61 (from the Friendship metro station, in front of the Chkalov metro station)"
         },
-        {
-          "label": "Get in Touch",
-          "icon": "mail"
+        "contact_info": {
+            "email": {
+                "heading": "EMAIL",
+                "link": "info@icg.uz"
+            },
+            "international_phone": {
+                "heading": "International Phone",
+                "link": "+998 99 811 72 22"
+            },
+            "local_phone": {
+                "heading": "Local Phone",
+                "link": "+998 98 300 00 62"
+            }
+        },
+        "form": {
+            "fields": [
+                {
+                    "label": "Name",
+                    "type": "text",
+                    "placeholder": "Your Name"
+                },
+                {
+                    "label": "Email",
+                    "type": "email",
+                    "placeholder": "Your Email"
+                },
+                {
+                    "label": "Message",
+                    "type": "textarea",
+                    "placeholder": "Your Message"
+                }
+            ],
+
+            "button": {
+                "text": "Send"
+            }
         }
-      ]
     },
-    "aboutStatistics": {
-      "title": "Infinity Copper Group",
-      "heading": "Our Achievements",
-      "stats": [
-        {
-          "value": 5,
-          "unit": "million+",
-          "description": "Products Delivered"
-        },
-        {
-          "value": 100,
-          "unit": "+",
-          "description": "Partners Worldwide"
-        },
-        {
-          "value": 1000,
-          "unit": "+",
-          "description": "Satisfied Customers"
-        },
-        {
-          "value": 10,
-          "unit": "+",
-          "description": "Years of Experience"
+    "footer": {
+        "description": "The activities are focused on meeting customer needs and creating new products and services based on flexibility and innovation.",
+        "copyright": {
+            "text": "© 2024 Qmatrics"
         }
-      ]
     },
-    "aboutInfoFirst": {
-      "status": "History of ICG",
-      "desk": "Our activities are based on meeting customer needs, flexibility in work, and innovations in developing new products, solutions, and services. The history of Infinity Copper Group began in 2010 with the construction of a plant for producing copper pipes used in daily life, automotive, construction, and in the manufacture of household air conditioners, refrigerators, and heating devices. This was the first step in developing the Central Asian market for water and gas supply systems.",
-      "img": "https://icg.uz/media/images/about-3.jpg",
-      "title": "Infinity Copper Group is a leading supplier of high-quality copper pipes in Central Asia.",
-      "ltr": false
-    },
-    "aboutInfoSecond": {
-      "status": "OUR MISSION",
-      "title": "To help our clients find solutions with copper pipes that enable them to obtain relevant products, services, and information.",
-      "img": "https://icg.uz/media/images/about-4.jpg",
-      "desk": "We offer you quality products. By purchasing products from Infinity Copper Group, you can be confident in the reliability of the equipment. All products of Infinity Copper Group are manufactured only from the purest mineral raw materials, without the use of waste or recycled copper. We operate under the brand name 'Infinity Copper Group' throughout the marketing territory. For us, the strength of our brand comes not from words, but from actions. We promise our customers to deliver quality work and strive daily to achieve this goal. We want our clients to recognize Infinity Copper Group as a symbol of innovation, quality, and customer satisfaction. In all our actions, we take into account the needs of our customers.",
-      "ltr": true
-    }
-  },
-
-  "partners": {
-    "buttonText": "Learn More"
-  },
-
-  "exports": {
-    "header": {
-      "subtitle": "ICG Company in the Global Market",
-      "title": "Our Export Deliveries"
-    },
-    "description": "ICG successfully exports its copper pipes and other products to numerous countries worldwide. The company’s products are distinguished by high quality and are manufactured in accordance with global standards. ICG is recognized as a reliable partner in the international market and makes constant deliveries to many countries. The volume of exports enhances the competitiveness of the company and is widely utilized.",
-    "map": "https://www.google.com/maps/d/embed?mid=1t8w5jWUhQ4Q5JXzxIJgbGMGVJadiLio&ehbc=2E312F"
-  },
-
-  "manuals": {
-    "header": {
-      "subtitle": "ICG Company in the Global Market",
-      "title": "Our Export Deliveries"
-    },
-    "description": "ICG successfully exports its copper pipes and other products to numerous countries worldwide. The company’s products are distinguished by high quality and are manufactured in accordance with global standards. ICG is recognized as a reliable partner in the international market and makes constant deliveries to many countries. The volume of exports enhances the competitiveness of the company and is widely utilized.",
-    "catalogue": {
-      "src": "https://icg.uz/static/assets/files/catalogue1.pdf",
-      "type": "application/pdf",
-      "height": "800px"
-    }
-  },
-
-  "team": {
-    "header": {
-      "title": "Our Team",
-      "description": "In our team, there is mutual cooperation, understanding, and trust. We work together and achieve success. Our team consists of people with various professions, from experienced specialists to youth and students."
-    }
-  },
-
-  "products": {
-    "title": "Our Products",
-    "subtitle": "World-Class Products",
-    "description": "ICG.UZ offers high-quality products and solutions based on modern technologies. We strive to provide flexible and innovative services to meet customer needs. Our products are developed with a personalized approach to each client, helping us earn their trust.",
-    "link_text": "Get it",
-    "steps-finish": {
-      "title": "Reliable Partnership",
-      "description": "The company ensures long-term reliable partnerships through quality products and services."
-    },
-    "choiceProduct": "Choose a product:",
-    "choiceStandard": "Choose a standard:",
-    "addShopCard": "Add to cart"
-  },
-
-  "contact": {
-    "title": "Contact",
-    "description": "You can reach us or get a free consultation.",
-    "location": {
-      "heading": "Address",
-      "address": "Tashkent, Yashnabad District, Elbek Street, Building 61 (from the Friendship metro station, in front of the Chkalov metro station)"
-    },
-    "contact_info": {
-      "email": {
-        "heading": "EMAIL",
-        "link": "info@icg.uz"
-      },
-      "international_phone": {
-        "heading": "International Phone",
-        "link": "+998 99 811 72 22"
-      },
-      "local_phone": {
-        "heading": "Local Phone",
-        "link": "+998 98 300 00 62"
-      }
-    },
-    "form": {
-      "fields": [
-        {
-          "label": "Name",
-          "type": "text",
-          "placeholder": "Your Name"
-        },
-        {
-          "label": "Email",
-          "type": "email",
-          "placeholder": "Your Email"
-        },
-        {
-          "label": "Message",
-          "type": "textarea",
-          "placeholder": "Your Message"
+    "news": {
+        "empty": {
+            "title": "No News Available",
+            "description": "We will keep you updated with our news. However, there are no news items available at the moment. Please check back in the future."
         }
-      ],
-
-      "button": {
-        "text": "Send"
-      }
-    }
-  },
-  "footer": {
-    "description": "The activities are focused on meeting customer needs and creating new products and services based on flexibility and innovation.",
-    "copyright": {
-      "text": "© 2024 Qmatrics"
-    }
-  },
-  "news": {
-    "empty": {
-      "title": "No News Available",
-      "description": "We will keep you updated with our news. However, there are no news items available at the moment. Please check back in the future."
-    }
-  },
-  "table": {
-    "tableHeaders": {
-      "outerDiameter": "Outer Diameter",
-      "size": "Size",
-      "wallThickness": "Wall Thickness (in/mm)",
-      "unitWeight": "Unit Weight (lb/ft, kg/m)",
-      "length": "Length (ft, m)"
     },
-    "tableValues": {
-      "min": "Min",
-      "max": "Max",
-      "ft": "ft",
-      "m": "m"
-    }
-  },
-  "elbow": {
-    "headers": {
-      "product": "Product",
-      "en_standard": "EN Standard",
-      "astmb_standard": "ASTMB Standard"
-    }
-  },
+    "table": {
+        "tableHeaders": {
+            "outerDiameter": "Outer Diameter",
+            "size": "Size",
+            "wallThickness": "Wall Thickness (in/mm)",
+            "unitWeight": "Unit Weight (lb/ft, kg/m)",
+            "length": "Length (ft, m)"
+        },
+        "tableValues": {
+            "min": "Min",
+            "max": "Max",
+            "ft": "ft",
+            "m": "m"
+        }
+    },
 
-  "calc": {
-    "outerDiameter": "Outer Diameter",
-    "selectOuterDiameter": "Select Outer Diameter",
-    "wallThickness": "Wall Thickness",
-    "wallThicknessIn": "(In) Max",
-    "wallThicknessMin": "Min",
-    "error": "Enter a valid value",
-    "unitWeight": "Unit Weight",
-    "unitWeightLbFtMax": "(lb/ft) Max",
-    "unitWeightLbFtMin": "Min",
-    "unitWeightKgMMax": "(Kg/m) Max",
-    "unitWeightKgMMin": "Min",
-    "length": "Length (m)",
-    "totalWeightLb": "lb/ft:",
-    "totalWeightKg": "kg/m:"
-  }
+    "elbow": {
+        "headers": {
+            "product": "Product",
+            "en_standard": "EN Standard",
+            "astmb_standard": "ASTMB Standard",
+            "drawing": "Drawing",
+            "poster": "Appearance"
+        }
+    },
+
+    "calc": {
+        "outerDiameter": "Outer Diameter",
+        "selectOuterDiameter": "Select Outer Diameter",
+        "wallThickness": "Wall Thickness",
+        "wallThicknessIn": "(In) Max",
+        "wallThicknessMin": "Min",
+        "error": "Enter a valid value",
+        "unitWeight": "Unit Weight",
+        "unitWeightLbFtMax": "(lb/ft) Max",
+        "unitWeightLbFtMin": "Min",
+        "unitWeightKgMMax": "(Kg/m) Max",
+        "unitWeightKgMMin": "Min",
+        "length": "Length (m)",
+        "totalWeightLb": "lb/ft:",
+        "totalWeightKg": "kg/m:"
+    }
 }

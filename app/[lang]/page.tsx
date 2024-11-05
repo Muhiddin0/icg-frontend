@@ -9,15 +9,15 @@ import SplideCarousel from "./ui/partners/partners";
 import ProductsList from "./ui/products/products";
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Chart />
-      <About />
-      <ProductsList />
-      <SplideCarousel />
-      <LatestNews />
-      <ContactSection />
-    </>
-  );
+    return (
+        <>
+            <Hero />
+            {/* <Chart /> */}
+            <About />
+            <ProductsList />
+            <SplideCarousel />
+            <LatestNews />
+            <ContactSection />
+        </>
+    );
 }
