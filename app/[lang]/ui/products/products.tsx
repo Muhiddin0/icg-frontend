@@ -53,7 +53,7 @@ function ProductsList() {
                                 <p></p>
                                 <div className="card-actions justify-end">
                                     <Link
-                                        href={"/products" + product.id}
+                                        href={"/products/" + product.id}
                                         className="btn btn-primary"
                                     >
                                         {t("productCard.buttonText")}

@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             <Hero />
-            {/* <Chart /> */}
+            <Chart />
             <About />
             <ProductsList />
             <SplideCarousel />

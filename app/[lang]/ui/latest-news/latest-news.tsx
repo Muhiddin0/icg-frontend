@@ -78,7 +78,9 @@ function LatestNews() {
                             )
                         )
                     ) : (
-                        <EmptyAnimation />
+                        <div className="col-span-full">
+                            <EmptyAnimation />
+                        </div>
                     )}
                 </div>
             </div>

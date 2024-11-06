@@ -1,10 +1,14 @@
 "use client";
 
+import React from "react";
+import Image from "next/image";
+
 import { ICGAdvantagesSteps } from "@/constants/steps";
 import { Lang } from "@/types/lang";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
-import React from "react";
+
+import AboutPreview from "@/assets/about/about-1.jpg";
 
 function ProductSteps() {
     const { lang }: { lang: Lang } = useParams();
@@ -62,9 +66,11 @@ function ProductSteps() {
                             </div>
                         </div>
                     </div>
-                    <img
+                    <Image
                         className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
-                        src="https://icg.uz/media/images/about-1.jpg"
+                        src={AboutPreview}
+                        width={700}
+                        height={500}
                         alt="step"
                     />
                 </div>
