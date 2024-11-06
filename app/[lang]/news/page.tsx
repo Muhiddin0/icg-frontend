@@ -9,8 +9,11 @@ import { MoveRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import EmptyAnimation from "../ui/empty/empty";
 import { Lang } from "@/types/lang";
+import { useTranslations } from "next-intl";
 
 function NewsPage({ params: { lang } }: { params: { lang: Lang } }) {
+    const t = useTranslations("home.latestNews.button");
+
     instance.defaults.headers.common["Accept-Language"] = lang;
 
     const { data } = useQuery<ArticlesResponse>({
@@ -63,7 +66,7 @@ function NewsPage({ params: { lang } }: { params: { lang: Lang } }) {
                                                         href={`/news/${id}`}
                                                         className="text-primary inline-flex items-center gap-2 md:mb-2 lg:mb-0"
                                                     >
-                                                        O'qish
+                                                        {t("readMore")}
                                                         <MoveRight />
                                                     </Link>
                                                 </div>

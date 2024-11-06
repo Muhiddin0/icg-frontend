@@ -18,7 +18,7 @@ function LatestNews() {
     const t = useTranslations("home.latestNews");
     const { lang }: { lang: Lang } = useParams();
 
-    const keyUrl = "/articles?page_siz=3";
+    const keyUrl = "/articles?page_size=3";
 
     instance.defaults.headers.common["Accept-Language"] = lang;
     const { data } = useQuery<ArticlesResponse>({
@@ -27,7 +27,7 @@ function LatestNews() {
 
             return data;
         },
-        queryKey: [keyUrl],
+        queryKey: [keyUrl, 3],
     });
 
     return (
