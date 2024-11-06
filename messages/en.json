@@ -158,7 +158,8 @@
         },
         "choiceProduct": "Choose a product:",
         "choiceStandard": "Choose a standard:",
-        "addShopCard": "Add to cart"
+        "addShopCard": "Add to cart",
+        "count": "Count"
     },
 
     "contact": {
