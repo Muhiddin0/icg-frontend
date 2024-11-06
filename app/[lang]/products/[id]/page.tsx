@@ -13,6 +13,9 @@ import CoilTable from "../../ui/table/coil-table";
 import RefnetTable from "../../ui/table/refnet-table";
 import RefnetCalc from "../../ui/calc/refnet";
 
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css"; // Quill'ning default style
+
 type Props = {
     params: {
         id: string;
@@ -66,9 +69,16 @@ const ProductDetail = ({ params: { id, lang } }: Props) => {
                 </div>
 
                 <div
-                    dangerouslySetInnerHTML={{ __html: data.content }}
+                    // dangerouslySetInnerHTML={{ __html: data.content }}
                     className="container py-16 mx-auto"
-                ></div>
+                >
+                    {/* @ts-ignore  */}
+                    <ReactQuill
+                        value={data.content}
+                        readOnly={true}
+                        theme="snow"
+                    />
+                </div>
             </section>
         );
 };

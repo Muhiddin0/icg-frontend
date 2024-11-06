@@ -2,46 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+.ql-toolbar.ql-snow {
+    display: none;
+}
+.ql-container.ql-snow.ql-disabled {
+    border: none;
+}
+
 /* ---------------------- Golden/Yellow theme ----------------------- */
 :root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --border: 240 5.9% 90%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --accent: 39 100% 50%;
-  --accent-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --border: 240 5.9% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --accent: 39 100% 50%;
+    --accent-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 }
 .dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --accent: 39 100% 50%;
-  --accent-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --accent: 39 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 }
 
 .container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .text-shadow-for-white-bg {
-  /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .video-shadow {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 11%,
-    rgba(255, 255, 255, 0.7008053221288515) 30%,
-    rgba(255, 255, 255, 0) 100%
-  );
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 11%,
+        rgba(255, 255, 255, 0.7008053221288515) 30%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 /* set if productions */
@@ -51,26 +58,26 @@ body {
 } */
 
 summary {
-  list-style: none; /* Removes the marker */
-  cursor: pointer; /* Optional: Change cursor to pointer for better UX */
+    list-style: none; /* Removes the marker */
+    cursor: pointer; /* Optional: Change cursor to pointer for better UX */
 }
 
 .product-card:hover img {
-  scale: 1.1;
+    scale: 1.1;
 }
 
 .header-active {
-  animation: header-anm 0.7s ease-in-out 1;
-  box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+    animation: header-anm 0.7s ease-in-out 1;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes header-anm {
-  0% {
-    transform: translateY(-100%);
-    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0);
-  }
-  100% {
-    transform: translateY(0);
-    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
-  }
+    0% {
+        transform: translateY(-100%);
+        box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+    }
 }
