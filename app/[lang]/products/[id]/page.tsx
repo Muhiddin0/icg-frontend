@@ -1,14 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
 import { useTranslations } from "next-intl";
-import { ShoppingCart } from "lucide-react";
-import clsx from "clsx";
 import { Lang } from "@/types/lang";
 import { instance } from "@/services/axios";
 import { useQuery } from "@tanstack/react-query";
-import { Coil, Product } from "@/types/products";
+import { Product } from "@/types/products";
 import Image from "next/image";
 import { CoilCalc } from "../../ui/calc";
 import CoilTable from "../../ui/table/coil-table";

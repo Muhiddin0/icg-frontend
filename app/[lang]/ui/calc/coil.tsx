@@ -174,15 +174,15 @@ function CoilCalc({ data }: Props) {
                     </div>
 
                     <div className="grid grid-cols-2 col-span-full gap-x-3">
-                        <p className="col-span-full">Unit Weight</p>
+                        <p className="col-span-full">{t("unitWeight")}</p>
                         <label className="mt-2 col-span-1">
                             <p className="text-sm mb-1">
-                                (lg/ft) Max{" "}
+                                (lg/ft) {t("tableValues.max")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.unit_weight_max_lbft
                                     )}
-                                , (Min){" "}
+                                , ({t("tableValues.min")}){" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.unit_weight_min_lbft
@@ -206,10 +206,10 @@ function CoilCalc({ data }: Props) {
                         </label>
                         <label className="mt-2 col-span-1">
                             <p className="text-sm mb-1">
-                                (kg/m) Max{" "}
+                                (kg/m) {t("tableValues.max")}{" "}
                                 {coil &&
                                     removeExcessZeros(coil.unit_weight_max_kgm)}
-                                , (Min){" "}
+                                , ({t("tableValues.min")}){" "}
                                 {coil &&
                                     removeExcessZeros(coil.unit_weight_min_kgm)}
                             </p>
@@ -232,9 +232,11 @@ function CoilCalc({ data }: Props) {
                     </div>
 
                     <div className="grid grid-cols-2 col-span-full gap-x-3">
-                        <p className="col-span-full">Length</p>
+                        <p className="col-span-full">
+                            {t("tableValues.length")}
+                        </p>
                         <label className="mt-2 col-span-full">
-                            <p className="text-sm mb-1">(m) Metr</p>
+                            <p className="text-sm mb-1">(m) </p>
                             <input
                                 disabled={!coil}
                                 className="input input-bordered w-full"
