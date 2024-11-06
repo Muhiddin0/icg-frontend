@@ -14,6 +14,7 @@ type Props = {
 
 function RefnetCalc({ product }: Props) {
     const t = useTranslations("products");
+
     const elbow = useTranslations("elbow.headers");
 
     const basket = useGetUserBasket();

@@ -38,6 +38,7 @@ function CoilCalc({ data }: Props) {
     const [result, setResult] = useState<CalculateResult | null>();
 
     const t = useTranslations("products");
+    const calc = useTranslations("calc");
     const route = useRouter();
 
     const basket = useGetUserBasket();
@@ -78,7 +79,7 @@ function CoilCalc({ data }: Props) {
             <>
                 <div className="grid grid-cols-2 my-5 gap-4">
                     <div className="col-span-full">
-                        <p>Outer Diameter</p>
+                        <p>{calc("outerDiameter")}</p>
                         <select
                             className="select select-bordered w-full col-span-full mt-3"
                             name="outer-diameter"
@@ -112,15 +113,15 @@ function CoilCalc({ data }: Props) {
                     </div>
 
                     <div className="grid grid-cols-2 col-span-full gap-x-3">
-                        <p className="col-span-full">Wall Thickness</p>
+                        <p className="col-span-full">{calc("wallThickness")}</p>
                         <label className="mt-2 col-span-1">
                             <p className="text-sm">
-                                (In) Max{" "}
+                                {calc("wallThicknessIn")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.wall_thickness_max_in
                                     )}
-                                , (Min){" "}
+                                {calc("wallThicknessMin")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.wall_thickness_min_in
@@ -144,12 +145,12 @@ function CoilCalc({ data }: Props) {
                         </label>
                         <label className="mt-2 col-span-1">
                             <p className="text-sm">
-                                (Mm) Max{" "}
+                                {calc("wallThicknessMm")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.wall_thickness_max_mm
                                     )}
-                                , (Min){" "}
+                                {calc("wallThicknessMin")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.wall_thickness_min_mm
@@ -177,12 +178,12 @@ function CoilCalc({ data }: Props) {
                         <p className="col-span-full">{t("unitWeight")}</p>
                         <label className="mt-2 col-span-1">
                             <p className="text-sm mb-1">
-                                (lg/ft) {t("tableValues.max")}{" "}
+                                {calc("unitWeightLbFtMax")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.unit_weight_max_lbft
                                     )}
-                                , ({t("tableValues.min")}){" "}
+                                {calc("unitWeightLbFtMin")}{" "}
                                 {coil &&
                                     removeExcessZeros(
                                         coil.unit_weight_min_lbft
@@ -206,10 +207,10 @@ function CoilCalc({ data }: Props) {
                         </label>
                         <label className="mt-2 col-span-1">
                             <p className="text-sm mb-1">
-                                (kg/m) {t("tableValues.max")}{" "}
+                                {calc("unitWeightKgMMax")}{" "}
                                 {coil &&
                                     removeExcessZeros(coil.unit_weight_max_kgm)}
-                                , ({t("tableValues.min")}){" "}
+                                {calc("unitWeightKgMMin")}{" "}
                                 {coil &&
                                     removeExcessZeros(coil.unit_weight_min_kgm)}
                             </p>
@@ -232,9 +233,7 @@ function CoilCalc({ data }: Props) {
                     </div>
 
                     <div className="grid grid-cols-2 col-span-full gap-x-3">
-                        <p className="col-span-full">
-                            {t("tableValues.length")}
-                        </p>
+                        <p className="col-span-full">{calc("length")} </p>
                         <label className="mt-2 col-span-full">
                             <p className="text-sm mb-1">(m) </p>
                             <input

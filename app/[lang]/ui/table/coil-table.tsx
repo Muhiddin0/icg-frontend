@@ -2,9 +2,12 @@
 
 import { removeExcessZeros } from "@/functions/prefixer";
 import { Product } from "@/types/products";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const ProductTable: React.FC<{ product: Product }> = ({ product }) => {
+    const calc = useTranslations("calc");
+
     if (product.coils)
         return (
             <div className="flex justify-center items-center p-8">
@@ -13,14 +16,14 @@ const ProductTable: React.FC<{ product: Product }> = ({ product }) => {
                         <thead>
                             <tr className="bg-primary text-white">
                                 <th className="p-4 border">
-                                    Outer Diameter (in)
+                                    {calc("outerDiameter")} (in)
                                 </th>
                                 <th className="p-4 border">Size (mm)</th>
                                 <th className="p-4 border">
-                                    Wall Thickness (in/mm)
+                                    {calc("wallThickness")} (in/mm)
                                 </th>
                                 <th className="p-4 border">
-                                    Unit Weight (lb/ft, kg/m)
+                                    {calc("unitWeight")} (lb/ft, kg/m)
                                 </th>
                                 <th className="p-4 border">
                                     (
