@@ -1,7 +1,7 @@
 "use client";
 
 import { TeamMembersList } from "@/constants/team";
-import { Phone } from "lucide-react";
+import { AtSign, Phone } from "lucide-react";
 import Image from "next/image";
 
 import { Link } from "@/i18n/routing";
@@ -52,6 +52,14 @@ function TeamPage({ params: { lang } }: Props) {
                                         >
                                             <Phone size={18} />
                                             {item.phone}
+                                        </Link>
+
+                                        <Link
+                                            href={`gmail:example@gmail.com`}
+                                            className="mb-4 text-primary flex items-center gap-2"
+                                        >
+                                            <AtSign size={18} />
+                                            example@gmail.com
                                         </Link>
                                     </div>
                                 </div>
