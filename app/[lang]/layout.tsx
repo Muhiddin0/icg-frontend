@@ -12,6 +12,7 @@ import { defaultSEOConfig } from "@/seo.config";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Lang } from "@/types/lang";
+import VoiceflowWidget from "./ui/chat-widjet";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -52,6 +53,7 @@ export default async function RootLayout({
                             <Header />
                             <CursorTrailCanvas className="top-0 left-0 pointer-events-none fixed inset-0 z-50 h-full w-full" />
                             {children}
+                            <VoiceflowWidget />
                             <Footer />
                         </AOSProvider>
                     </ReactQueryProvider>

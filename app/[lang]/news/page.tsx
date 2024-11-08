@@ -25,6 +25,8 @@ function NewsPage({ params: { lang } }: { params: { lang: Lang } }) {
         queryKey: ["articles"],
     });
 
+    console.log(data);
+
     // const images = data.results.map(({ poster, desk }) => ({
     //   url: poster,
     //   width: 1200,
