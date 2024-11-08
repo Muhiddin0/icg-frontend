@@ -14,13 +14,14 @@ const VoiceflowWidget = () => {
                     url: "https://general-runtime.voiceflow.com",
                     versionID: "production",
                     assistant: {
-                        title: "ICG Mohira",
+                        title: "Azizkhan Eshonkhujaev",
                         description:
                             "ICG companiyamiz haqida qiziqtirgan savollaringizni bering. ☺",
                     },
                 });
             }
         };
+
         document.body.appendChild(script);
 
         return () => {
