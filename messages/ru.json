@@ -225,5 +225,16 @@
         "length": "Длина (м)",
         "totalWeightLb": "lb/ft:",
         "totalWeightKg": "кг/м:"
+    },
+    "shop": {
+        "shopTitle": "Магазин",
+        "firstNameLabel": "Имя",
+        "lastNameLabel": "Фамилия",
+        "emailLabel": "Эл. почта",
+        "phoneLabel": "Телефон",
+        "companyNameLabel": "Название компании",
+        "addressLabel": "Адрес",
+        "submitButton": "Отправить",
+        "successMessage": "Успешно отправлено"
     }
 }

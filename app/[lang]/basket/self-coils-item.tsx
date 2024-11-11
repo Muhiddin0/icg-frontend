@@ -1,5 +1,5 @@
-import React from "react";
-import { CoilsProduct } from "@/types/basket";
+import React, { useState } from "react";
+import { Basket, CoilsProduct } from "@/types/basket";
 import { instance } from "@/services/axios";
 import { useParams } from "next/navigation";
 import { Lang } from "@/types/lang";
@@ -9,6 +9,8 @@ import Image from "next/image";
 
 interface Props {
     coil: CoilsProduct;
+    handleChange: (data: Basket) => void;
+    index: number;
 }
 
 export type WallThickness = {
@@ -54,7 +56,7 @@ export type CoilResponse = {
     };
 };
 
-function SelCoilsItem({ coil }: Props) {
+function SelCoilsItem({ coil, handleChange, index }: Props) {
     const { lang }: { lang: Lang } = useParams();
 
     instance.defaults.headers.common["Accept-Language"] = lang;
@@ -67,8 +69,16 @@ function SelCoilsItem({ coil }: Props) {
         queryKey: ["coil", coil.id],
     });
 
-    function handleDelete(id: number) {
-        localStorage.getItem("basket");
+    function handleDelete(index: number) {
+        let basket: Basket = JSON.parse(
+            localStorage.getItem("basket") as string
+        );
+
+        basket.coils = basket.coils.filter((item, i) => i !== index);
+
+        localStorage.setItem("basket", JSON.stringify(basket));
+
+        handleChange(basket);
     }
 
     if (data)
@@ -102,7 +112,7 @@ function SelCoilsItem({ coil }: Props) {
 
                     <div className="mt-3">
                         <button
-                            onClick={() => handleDelete(coil.id)}
+                            onClick={() => handleDelete(index)}
                             className="btn btn-outline btn-sm"
                         >
                             Delete

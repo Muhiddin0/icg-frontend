@@ -269,5 +269,16 @@
         "length": "Uzunlik (m)",
         "totalWeightLb": "lb/ft:",
         "totalWeightKg": "kg/m:"
+    },
+    "shop": {
+        "shopTitle": "Do'kon",
+        "firstNameLabel": "Ism",
+        "lastNameLabel": "Familya",
+        "emailLabel": "Gmail",
+        "phoneLabel": "Tel",
+        "companyNameLabel": "Korxonangiz nomi",
+        "addressLabel": "Manzil",
+        "submitButton": "Yuborish",
+        "successMessage": "Muvaffaqiyatli yuborildi"
     }
 }

@@ -260,5 +260,16 @@
         "length": "Length (m)",
         "totalWeightLb": "lb/ft:",
         "totalWeightKg": "kg/m:"
+    },
+    "shop": {
+        "shopTitle": "Shop",
+        "firstNameLabel": "First Name",
+        "lastNameLabel": "Last Name",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone",
+        "companyNameLabel": "Company Name",
+        "addressLabel": "Address",
+        "submitButton": "Submit",
+        "successMessage": "Successfully submitted"
     }
 }

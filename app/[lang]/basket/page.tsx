@@ -1,14 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ExmptyBasker from "../ui/empty/empty-basket";
 import SelCoilsItem from "./self-coils-item";
 import SelfRefnetsItem from "./self-refnets-item";
 import useGetUserBasket from "@/hooks/get-basket";
 import { Link } from "@/i18n/routing";
+import { Basket } from "@/types/basket";
 
 function BasketPage() {
-    const basket = useGetUserBasket();
+    const useBasket = useGetUserBasket();
+
+    const [basket, setBasket] = useState<Basket | null>(null);
+
+    useEffect(() => {
+        setBasket(useBasket);
+    }, [useBasket]);
+
+    function handleChange(data: Basket) {
+        console.log("🚀 ~ handleChange ~ data:", data);
+        setBasket(data);
+    }
 
     if (basket)
         return (
@@ -20,12 +32,20 @@ function BasketPage() {
                             <ExmptyBasker />
                         ) : (
                             <>
-                                {basket.coils.map((item) => (
-                                    <SelCoilsItem coil={item} />
+                                {basket.coils.map((item, index) => (
+                                    <SelCoilsItem
+                                        handleChange={handleChange}
+                                        index={index}
+                                        coil={item}
+                                    />
                                 ))}
 
-                                {basket.refnets.map((item) => (
-                                    <SelfRefnetsItem product={item} />
+                                {basket.refnets.map((item, index) => (
+                                    <SelfRefnetsItem
+                                        handleChange={handleChange}
+                                        index={index}
+                                        product={item}
+                                    />
                                 ))}
                             </>
                         )}
