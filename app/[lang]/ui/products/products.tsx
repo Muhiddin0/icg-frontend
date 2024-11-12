@@ -2,7 +2,6 @@
 
 import React from "react";
 
-import { ProductsItem } from "@/constants/products";
 import SectionTitle from "../common/section-title/section-title";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
