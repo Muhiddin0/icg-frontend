@@ -1,4 +1,10 @@
 {
+    "notifications": {
+        "success": "Xabar muvaffaqiyatli yuborildi",
+        "error": "Xabar yuborishda xatolik yuz berdi",
+        "warning": "Xabar yuborishda xatolik yuz berdi",
+        "fieldsError": "Barcha maydonlarni to'ldiring"
+    },
     "home": {
         "hero": {
             "welcome_message": "ICG ga xush kelibsiz!",
@@ -47,6 +53,7 @@
             "contactForm": {
                 "heading": "Aloqa",
                 "description": "Biz bilan bog'lanishingiz yoki bepul maslahat olishingiz mumkin",
+                "name": "Ism Familya",
                 "emailOrPhone": "Email yoki Telefon",
                 "message": "Xabar",
                 "submitButton": "Jo'natish"
@@ -64,7 +71,7 @@
                     "label": "Aloqa",
                     "icon": "phone"
                 },
-                "main": {
+                "mail": {
                     "label": "Bog'lanish",
                     "icon": "mail"
                 }

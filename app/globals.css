@@ -52,10 +52,10 @@
 }
 
 /* set if productions */
-/* html,
+html,
 body {
-  overflow-x: hidden;
-} */
+    overflow-x: hidden;
+}
 
 summary {
     list-style: none; /* Removes the marker */

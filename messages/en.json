@@ -1,4 +1,11 @@
 {
+    "notifications": {
+        "success": "Message sent successfully",
+        "error": "Error sending message",
+        "warning": "An error occurred while sending the message",
+        "fieldsError": "Please fill in all the fields"
+    },
+
     "home": {
         "hero": {
             "welcome_message": "Welcome to ICG!",
@@ -49,6 +56,7 @@
             "contactForm": {
                 "heading": "Contact",
                 "description": "You can reach us or get a free consultation.",
+                "name": "First Name Last Name",
                 "emailOrPhone": "Email or Phone",
                 "message": "Message",
                 "submitButton": "Send"
@@ -61,16 +69,16 @@
             "imageAlt": "Infinity Copper Group Logo",
             "title": "Infinity Copper Group",
             "description": "ICG (Infinity Copper Group) is a leading company in the supply of copper pipes in Uzbekistan. Founded in 2010, it produces copper pipes used in various fields such as automotive, construction, and household appliances. The company offers products based on customer needs and innovations. All products are manufactured from pure mineral raw materials. The company has numerous partners worldwide and prioritizes quality.",
-            "buttons": [
-                {
+            "buttons": {
+                "phone": {
                     "label": "Contact",
                     "icon": "phone"
                 },
-                {
-                    "label": "Get in Touch",
+                "mail": {
+                    "label": "Get in touch",
                     "icon": "mail"
                 }
-            ]
+            }
         },
         "aboutStatistics": {
             "title": "Infinity Copper Group",

@@ -1,10 +1,13 @@
 "use client";
 
+import useGetUserBasket from "@/hooks/get-basket";
 import { sendContactForm } from "@/lib/api";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 function ShopPage() {
+    const basket = useGetUserBasket();
+
     const t = useTranslations("shop");
 
     const [firstName, setFirstName] = useState<string>("");
@@ -16,11 +19,32 @@ function ShopPage() {
 
     function handleSubmit() {
         if (firstName && lastName && email && phone && companyName && address) {
+            let message = ``;
+            basket.coils.forEach((item) => {
+                message += `
+                <div>
+                    <p>${item.product}</p>
+                    <p>${item.totalWeight}</p>
+                </div>
+                `;
+            });
+
+            basket.refnets.forEach((item) => {
+                message += `
+                <div>
+                    <p>${item.product}</p>
+                    <p>${item.count}</p>
+                </div>
+                `;
+            });
+
+            message += `<a href="tel:${phone}">${phone}</a>`;
+
             sendContactForm({
-                email: "test@gmail.com",
-                message: "Salom",
-                name: "muhiddin",
-                subject: "test",
+                email: email,
+                message: message,
+                name: `${firstName} ${lastName}`,
+                subject: "Shop",
             });
         }
     }
