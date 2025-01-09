@@ -6,7 +6,8 @@ import React, { Fragment, useEffect } from "react";
 
 const AOSProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
-    AOS.init();
+    // this change
+    // AOS.init();
   }, []);
 
   return <Fragment>{children}</Fragment>;
