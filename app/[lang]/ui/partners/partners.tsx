@@ -31,7 +31,7 @@ const Partnors: React.FC = () => {
               <Image
                 width={300}
                 height={300}
-                className="w-auto h-auto grayscale hover:grayscale-0 transition-all duration-200 ease-in"
+                className="w-auto h-auto transition-all duration-200 ease-in"
                 src={item.image}
                 alt={item.name}
               />
